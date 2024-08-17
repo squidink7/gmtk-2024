@@ -1,12 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dus2pvokunekl"]
 
-[ext_resource type="Texture2D" uid="uid://ompqbm0dl2gj" path="res://icon.svg" id="1_fl8dl"]
+[ext_resource type="Texture2D" uid="uid://dphvy04ditv57" path="res://assets/textures/objects/dragon/dragon.png" id="1_0lh0g"]
 [ext_resource type="PackedScene" uid="uid://di0q22nm63s3r" path="res://scenes/objects/fishing_line/fishing_line.tscn" id="2_2f20c"]
 
 [node name="Dragon" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_fl8dl")
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(3.8147e-06, 4.76837e-06)
+scale = Vector2(4.39216, 4.39216)
+texture = ExtResource("1_0lh0g")
 
 [node name="FishingLine" parent="." instance=ExtResource("2_2f20c")]
-position = Vector2(64, -104)
+position = Vector2(88, -80)

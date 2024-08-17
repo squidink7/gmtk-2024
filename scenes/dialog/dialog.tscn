@@ -1,30 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2mel54gscrei"]
+[gd_scene load_steps=3 format=3 uid="uid://c2mel54gscrei"]
 
-[ext_resource type="Texture2D" uid="uid://ca6xldj7e5iuq" path="res://assets/textures/objects/dragon/IMG_0315.png" id="1_mqs5s"]
+[ext_resource type="Script" path="res://scenes/dialog/dialog.gd" id="1_0ki2f"]
+[ext_resource type="Texture2D" uid="uid://27so1fcclu0d" path="res://assets/textures/objects/wizard/speak.png" id="2_3ho30"]
 
-[node name="dialog" type="Control"]
-layout_mode = 3
+[node name="dialog" type="CanvasLayer"]
+script = ExtResource("1_0ki2f")
+
+[node name="background" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0.203922)
 
 [node name="character" type="TextureRect" parent="."]
-layout_mode = 1
+texture_filter = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 32.0
-offset_top = -264.0
+offset_top = -256.0
 offset_right = 296.0
-offset_bottom = -32.0
+offset_bottom = -24.0
 grow_vertical = 0
-texture = ExtResource("1_mqs5s")
+texture = ExtResource("2_3ho30")
 stretch_mode = 5
 
 [node name="scroll" type="ColorRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -36,7 +39,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="scroll"]
+[node name="line_display" type="RichTextLabel" parent="scroll"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,3 +48,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Dialog text goes here"
+
+[node name="character_timer" type="Timer" parent="."]

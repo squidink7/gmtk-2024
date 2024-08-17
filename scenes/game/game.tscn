@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=7 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
 [ext_resource type="PackedScene" uid="uid://dus2pvokunekl" path="res://scenes/objects/dragon/dragon.tscn" id="1_p4ryi"]
+[ext_resource type="PackedScene" uid="uid://c2mel54gscrei" path="res://scenes/dialog/dialog.tscn" id="4_jlu1b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
 
@@ -36,6 +37,8 @@ position = Vector2(0, 648)
 rotation = 0.0024124
 limit_left = 0
 limit_bottom = 648
+
+[node name="dialog" parent="." instance=ExtResource("4_jlu1b")]
 
 [connection signal="body_entered" from="boundry" to="boundry" method="on_boundry_entered"]
 [connection signal="body_entered" from="water" to="water" method="on_water_entered"]

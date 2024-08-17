@@ -1,0 +1,4 @@
+/CHAR wizard/speak
+We have a dialog system!
+Click to read the next line
+
