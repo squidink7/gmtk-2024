@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bifh5gdalkpsd"
+=======
+uid="uid://rc4shmduyniv"
+>>>>>>> f21f50a (added kibty lines)
 path="res://.godot/imported/fishman angry.png-1096540ca86fb12f997fe25d53f8b8bf.ctex"
 metadata={
 "vram_texture": false
