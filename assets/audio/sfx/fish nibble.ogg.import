@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://calfb1h2rhlnm"
+path="res://.godot/imported/fish nibble.ogg-2ff23ee4e3341ee07d28edb1303ef49c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/fish nibble.ogg"
+dest_files=["res://.godot/imported/fish nibble.ogg-2ff23ee4e3341ee07d28edb1303ef49c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

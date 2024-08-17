@@ -1,3 +1,41 @@
-[gd_scene format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=6 format=3 uid="uid://bqbrk63ly54yu"]
 
-[node name="Game" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
+[ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
+[ext_resource type="PackedScene" uid="uid://dus2pvokunekl" path="res://scenes/objects/dragon/dragon.tscn" id="1_p4ryi"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o68nb"]
+size = Vector2(3520, 392)
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_3iu1x")
+
+[node name="Dragon" parent="." instance=ExtResource("1_p4ryi")]
+position = Vector2(128, 168)
+
+[node name="boundry" type="Area2D" parent="."]
+position = Vector2(3776, 248)
+script = ExtResource("1_gxcjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boundry"]
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_jxhwa")
+
+[node name="water" type="Area2D" parent="."]
+script = ExtResource("1_gxcjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="water"]
+position = Vector2(2016, 452)
+shape = SubResource("RectangleShape2D_o68nb")
+
+[node name="camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 648)
+rotation = 0.0024124
+limit_left = 0
+limit_bottom = 648
+
+[connection signal="body_entered" from="boundry" to="boundry" method="on_boundry_entered"]
+[connection signal="body_entered" from="water" to="water" method="on_water_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2o4fth14dct3"
+path="res://.godot/imported/stressful timer.ogg-6307be81b9fcec97a690c9eb2ff3d4a1.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/stressful timer.ogg"
+dest_files=["res://.godot/imported/stressful timer.ogg-6307be81b9fcec97a690c9eb2ff3d4a1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

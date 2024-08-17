@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dl0y55e3mp3fs"
+path="res://.godot/imported/wizard pop-up.ogg-de1fd6d35955deeac570596c1ccef6f8.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/wizard pop-up.ogg"
+dest_files=["res://.godot/imported/wizard pop-up.ogg-de1fd6d35955deeac570596c1ccef6f8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
