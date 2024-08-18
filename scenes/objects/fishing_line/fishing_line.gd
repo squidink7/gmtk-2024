@@ -28,12 +28,19 @@ func _physics_process(delta: float) -> void:
 			# pull hook back to idle if user doesn't keep pulling
 			state_progress -= 0.05
 			state_progress = max(state_progress, 0)
-			# $hook.position.x = lerp(0.0, -100.0, state_progress)
+			# $audio.stream.
+
+			# set the hook to primed
 			if state_progress >= 1:
 				cast_force = 0
 				$hook.linear_damp = 1
 				$hook.gravity_scale = 1
 				set_current_state(LineState.PRIMED)
+		
+		LineState.PRIMED:
+			pass
+			# $audio/tension.play()
+		
 		LineState.CASTING:
 			fling_line()
 			# state_progress measures time left to add force to the flick
@@ -77,10 +84,13 @@ func _input(event: InputEvent) -> void:
 						if event.relative.x <= -0.15:
 							# show "hold down mouse" label
 							pass
+
 			LineState.PRIMED:
 				if event.relative.x >= 0.2 and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 					set_current_state(LineState.CASTING)
+					# $audio/cast.play()
 					$hook.freeze = false
+
 			LineState.CASTING:
 				# flick line forward
 				if event.relative.x > 0:

@@ -27,7 +27,7 @@ func next_line():
 
 	# script complete
 	if current_line >= len(script_lines) - 1:
-		visible = false
+		close_dialog()
 		return
 	
 	# play voice line
@@ -56,3 +56,7 @@ func stop_voice() -> void:
 	current_character_texture = -1
 	update_character_texture()
 	$character_timer.stop()
+
+
+func close_dialog() -> void:
+	visible = false

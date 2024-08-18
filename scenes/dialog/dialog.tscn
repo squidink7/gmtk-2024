@@ -28,6 +28,17 @@ grow_vertical = 0
 texture = ExtResource("2_3ho30")
 stretch_mode = 5
 
+[node name="skip_button" type="Button" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 64.0
+grow_horizontal = 0
+text = "skip"
+
 [node name="scroll" type="ColorRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,5 +72,6 @@ parameters/looping = true
 [node name="timer" type="Timer" parent="voice"]
 
 [connection signal="gui_input" from="background" to="." method="on_background_gui_input"]
+[connection signal="pressed" from="skip_button" to="." method="close_dialog"]
 [connection signal="timeout" from="character_timer" to="." method="update_character_texture"]
 [connection signal="timeout" from="voice/timer" to="." method="stop_voice"]

@@ -21,14 +21,14 @@ func _process(delta: float) -> void:
 func reel_in():
 	await get_tree().process_frame
 	freeze = true
+	get_parent().set_current_state(get_parent().LineState.IDLE)
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, 'position', Vector2.ZERO, 1)
 	await tween.finished
-	get_parent().set_current_state(get_parent().LineState.IDLE)
 	reset = true
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if reset:
 		reset = false
 		state.transform = Transform2D(0, Vector2.ZERO)
-		position = Vector2(-100,0)
+		position = Vector2(0,0)

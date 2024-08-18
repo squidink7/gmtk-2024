@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://di0q22nm63s3r"]
+[gd_scene load_steps=8 format=3 uid="uid://di0q22nm63s3r"]
 
 [ext_resource type="Script" path="res://scenes/objects/fishing_line/fishing_line.gd" id="1_u455m"]
 [ext_resource type="Script" path="res://scenes/objects/fishing_line/hook.gd" id="2_5rj3m"]
 [ext_resource type="Texture2D" uid="uid://dfnqvk8qdi3py" path="res://assets/textures/objects/hook/hook.png" id="3_vrp0c"]
-[ext_resource type="AudioStream" uid="uid://v82e1rovkmao" path="res://assets/audio/sfx/release rod whoosh.wav" id="4_yuu17"]
+[ext_resource type="AudioStream" uid="uid://dbabb8dmsrls1" path="res://assets/audio/sfx/rod cast whip.ogg" id="4_1al1y"]
+[ext_resource type="AudioStream" uid="uid://cp8juvr27chij" path="res://assets/audio/sfx/fishing line wind.ogg" id="4_ttf11"]
+[ext_resource type="AudioStream" uid="uid://bcng7oncj7wa2" path="res://assets/audio/sfx/holding tension.ogg" id="6_eigvm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jixne"]
 radius = 16.0
@@ -21,12 +23,21 @@ script = ExtResource("2_5rj3m")
 
 [node name="sprite" type="Sprite2D" parent="hook"]
 position = Vector2(5.68434e-14, 8)
-scale = Vector2(1, 1)
 texture = ExtResource("3_vrp0c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hook"]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_jixne")
 
-[node name="audio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_yuu17")
+[node name="audio3" type="Node" parent="."]
+
+[node name="reel" type="AudioStreamPlayer" parent="audio3"]
+
+[node name="wind" type="AudioStreamPlayer" parent="audio3"]
+stream = ExtResource("4_ttf11")
+
+[node name="cast" type="AudioStreamPlayer" parent="audio3"]
+stream = ExtResource("4_1al1y")
+
+[node name="tension" type="AudioStreamPlayer" parent="audio3"]
+stream = ExtResource("6_eigvm")

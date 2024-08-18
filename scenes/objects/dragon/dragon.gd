@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 		if $sprite.animation != 'idle':
 			$sprite.play('idle')
 		
+		$hookpath/pathfollow.progress_ratio = clamp(%fishingline.state_progress, 0, 1)
 		%fishingline.set_line_origin($idleanimpoints.get_child($sprite.frame).global_position)
 		
 	
