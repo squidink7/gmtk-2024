@@ -2,11 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-<<<<<<< HEAD
-uid="uid://dl0y55e3mp3fs"
-=======
-uid="uid://4qoj1xomq6jh"
->>>>>>> c6ba1ba (boop)
+uid="uid://b1udpe25crhem"
 path="res://.godot/imported/wizard pop-up.ogg-de1fd6d35955deeac570596c1ccef6f8.oggvorbisstr"
 
 [deps]

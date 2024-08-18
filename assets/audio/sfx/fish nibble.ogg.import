@@ -2,11 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-<<<<<<< HEAD
-uid="uid://calfb1h2rhlnm"
-=======
-uid="uid://crhlrw23vt66n"
->>>>>>> c6ba1ba (boop)
+uid="uid://btdhwg205mts"
 path="res://.godot/imported/fish nibble.ogg-2ff23ee4e3341ee07d28edb1303ef49c.oggvorbisstr"
 
 [deps]

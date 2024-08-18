@@ -2,11 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-<<<<<<< HEAD
-uid="uid://c7poaj2dwrovi"
-=======
-uid="uid://dm88jvmukv3k"
->>>>>>> c6ba1ba (boop)
+uid="uid://dxk07wmuq2m4u"
 path="res://.godot/imported/pull-back buildup.ogg-a976800ceb8a46fce7bd9acfd6912f3b.oggvorbisstr"
 
 [deps]

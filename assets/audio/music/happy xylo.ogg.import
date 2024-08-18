@@ -2,11 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-<<<<<<< HEAD
-uid="uid://dgleggkycwug0"
-=======
-uid="uid://bfgj8rtld3uj7"
->>>>>>> c6ba1ba (boop)
+uid="uid://c8o6ws6p5fnnd"
 path="res://.godot/imported/happy xylo.ogg-935a566ab55d28d8badc9062d31cf90d.oggvorbisstr"
 
 [deps]

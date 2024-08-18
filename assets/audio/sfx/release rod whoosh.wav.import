@@ -2,11 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-<<<<<<< HEAD
-uid="uid://yx5kunnm4b1c"
-=======
-uid="uid://du4l1iktkirww"
->>>>>>> c6ba1ba (boop)
+uid="uid://v82e1rovkmao"
 path="res://.godot/imported/release rod whoosh.wav-8cc682ab6985127e2ee5891626dca192.sample"
 
 [deps]
