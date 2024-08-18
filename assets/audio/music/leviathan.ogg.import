@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< HEAD
 uid="uid://ist0hg7w18cu"
+=======
+uid="uid://ymnkp3jglt28"
+>>>>>>> c6ba1ba (boop)
 path="res://.godot/imported/leviathan.ogg-15273fb17a205498544dc2d4eb8c5269.oggvorbisstr"
 
 [deps]

@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< HEAD
 uid="uid://c8l7057o2ayox"
+=======
+uid="uid://lw8i4fbshxy8"
+>>>>>>> c6ba1ba (boop)
 path="res://.godot/imported/harp.ogg-001bc11d50887f5a1935674dad42ede5.oggvorbisstr"
 
 [deps]

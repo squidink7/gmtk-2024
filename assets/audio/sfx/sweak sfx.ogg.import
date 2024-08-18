@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< HEAD
 uid="uid://cnfgk4p3uqq3d"
+=======
+uid="uid://tonbfit1df21"
+>>>>>>> c6ba1ba (boop)
 path="res://.godot/imported/sweak sfx.ogg-d80903e72e4b5b145ed527738d588725.oggvorbisstr"
 
 [deps]

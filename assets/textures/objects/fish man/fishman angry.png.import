@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cn17or1r4gotd"
+=======
+uid="uid://dsfkx3n5xyvw6"
+>>>>>>> c6ba1ba (boop)
 path="res://.godot/imported/fishman angry.png-1096540ca86fb12f997fe25d53f8b8bf.ctex"
 metadata={
 "vram_texture": false

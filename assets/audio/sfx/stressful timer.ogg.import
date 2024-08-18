@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< HEAD
 uid="uid://2o4fth14dct3"
+=======
+uid="uid://gftjamdiun1f"
+>>>>>>> c6ba1ba (boop)
 path="res://.godot/imported/stressful timer.ogg-6307be81b9fcec97a690c9eb2ff3d4a1.oggvorbisstr"
 
 [deps]

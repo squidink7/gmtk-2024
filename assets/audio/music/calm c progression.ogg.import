@@ -2,7 +2,11 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
+<<<<<<< HEAD
 uid="uid://c8pbng16rejqf"
+=======
+uid="uid://cpcl2pgxsvsdo"
+>>>>>>> c6ba1ba (boop)
 path="res://.godot/imported/calm c progression.ogg-a0145200d0bbbc15bc244ee550a9b512.oggvorbisstr"
 
 [deps]
