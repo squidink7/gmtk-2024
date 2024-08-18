@@ -25,17 +25,18 @@ func next_line():
 		update_character_texture()
 		current_line += 1
 
+	# script complete
+	if current_line >= len(script_lines) - 1:
+		visible = false
+		return
+	
 	# play voice line
 	$voice.play()
 	$voice/timer.wait_time = float(len(script_lines[current_line])) / 20.0
 	$voice/timer.start()
 	$character_timer.start()
 
-	# script complete
-	if current_line >= len(script_lines) - 1:
-		visible = false
-		return
-
+	# show line
 	%line_display.text = script_lines[current_line]
 
 	current_line += 1
