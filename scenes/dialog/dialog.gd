@@ -25,6 +25,13 @@ func next_line():
 		update_character_texture()
 		current_line += 1
 
+	# play voice line
+	$voice.play()
+	$voice/timer.wait_time = float(len(script_lines[current_line])) / 20.0
+	$voice/timer.start()
+	$character_timer.start()
+
+	# script complete
 	if current_line >= len(script_lines) - 1:
 		visible = false
 		return
@@ -32,7 +39,6 @@ func next_line():
 	%line_display.text = script_lines[current_line]
 
 	current_line += 1
-
 
 func update_character_texture():
 	current_character_texture += 1
@@ -43,3 +49,9 @@ func update_character_texture():
 func on_background_gui_input(event:InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		next_line()
+
+func stop_voice() -> void:
+	$voice.stop()
+	current_character_texture = -1
+	update_character_texture()
+	$character_timer.stop()

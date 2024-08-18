@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/dialog/dialog.gd" id="1_0ki2f"]
 [ext_resource type="Texture2D" uid="uid://27so1fcclu0d" path="res://assets/textures/objects/wizard/speak.png" id="2_3ho30"]
-[ext_resource type="AudioStream" uid="uid://b1udpe25crhem" path="res://assets/audio/sfx/wizard pop-up.ogg" id="3_qa331"]
+[ext_resource type="AudioStream" uid="uid://b5g8oygc5vxmn" path="res://assets/audio/sfx/wizard speak.ogg" id="3_77peb"]
 
 [node name="dialog" type="CanvasLayer"]
 script = ExtResource("1_0ki2f")
@@ -51,9 +51,15 @@ grow_vertical = 2
 text = "Dialog text goes here"
 
 [node name="character_timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
 
 [node name="voice" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_qa331")
+stream = ExtResource("3_77peb")
 parameters/looping = true
 
+[node name="timer" type="Timer" parent="voice"]
+
 [connection signal="gui_input" from="background" to="." method="on_background_gui_input"]
+[connection signal="timeout" from="character_timer" to="." method="update_character_texture"]
+[connection signal="timeout" from="voice/timer" to="." method="stop_voice"]

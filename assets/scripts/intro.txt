@@ -1,4 +1,4 @@
-/CHAR wizard/speak
+/CHAR wizard/default wizard/speak
 hi!
 you like fishing?
 yay :3
