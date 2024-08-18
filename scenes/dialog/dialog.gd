@@ -25,6 +25,10 @@ func next_line():
 		update_character_texture()
 		current_line += 1
 
+	if current_line >= len(script_lines) - 1:
+		visible = false
+		return
+
 	%line_display.text = script_lines[current_line]
 
 	current_line += 1
@@ -35,3 +39,7 @@ func update_character_texture():
 	if current_character_texture >= len(character_textures):
 		current_character_texture = 0
 	$character.texture = character_textures[current_character_texture]
+
+func on_background_gui_input(event:InputEvent) -> void:
+	if event is InputEventMouseButton and event.is_pressed():
+		next_line()

@@ -31,6 +31,8 @@ func _physics_process(delta: float) -> void:
 			$hook.position.x = lerp(0.0, -100.0, state_progress)
 			if state_progress >= 1:
 				cast_force = 0
+				$hook.linear_damp = 1
+				$hook.gravity_scale = 1
 				set_current_state(LineState.PRIMED)
 		LineState.CASTING:
 			fling_line()
@@ -78,5 +80,5 @@ func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if current_state == LineState.FLOATING:
+			if current_state != LineState.IDLE and current_state != LineState.PRIMED:
 				$hook.reel_in()

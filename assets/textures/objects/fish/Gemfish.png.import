@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://cn17or1r4gotd"
-=======
-uid="uid://dsfkx3n5xyvw6"
->>>>>>> c6ba1ba (boop)
-path="res://.godot/imported/fishman angry.png-1096540ca86fb12f997fe25d53f8b8bf.ctex"
+uid="uid://4am85lvy5xvf"
+path="res://.godot/imported/Gemfish.png-5c0c215f727ed95e11c406b36b00605d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish man/fishman angry.png"
-dest_files=["res://.godot/imported/fishman angry.png-1096540ca86fb12f997fe25d53f8b8bf.ctex"]
+source_file="res://assets/textures/objects/fish/Gemfish.png"
+dest_files=["res://.godot/imported/Gemfish.png-5c0c215f727ed95e11c406b36b00605d.ctex"]
 
 [params]
 
