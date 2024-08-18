@@ -55,3 +55,5 @@ text = "Dialog text goes here"
 [node name="voice" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_qa331")
 parameters/looping = true
+
+[connection signal="gui_input" from="background" to="." method="on_background_gui_input"]
