@@ -39,6 +39,7 @@ limit_left = 0
 limit_bottom = 648
 
 [node name="dialog" parent="." instance=ExtResource("4_jlu1b")]
+unique_name_in_owner = true
 
 [connection signal="body_entered" from="boundry" to="boundry" method="on_boundry_entered"]
 [connection signal="body_entered" from="water" to="water" method="on_water_entered"]

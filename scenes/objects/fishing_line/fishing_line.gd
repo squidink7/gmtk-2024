@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 			# pull hook back to idle if user doesn't keep pulling
 			state_progress -= 0.05
 			state_progress = max(state_progress, 0)
-			$hook.position.x = lerp(0.0, -100.0, state_progress)
+			# $hook.position.x = lerp(0.0, -100.0, state_progress)
 			if state_progress >= 1:
 				cast_force = 0
 				$hook.linear_damp = 1
@@ -56,8 +56,16 @@ func fling_line():
 	cast_force = max(cast_force, 0)
 	$hook.apply_central_force(Vector2(cast_force, -cast_force/2))
 
+func set_line_origin(pos: Vector2):
+	$line.points[0] = to_local(pos)
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
+		
+		# don't move if dialog active
+		if $/root/game/dialog.visible:
+			return
+		
 		match current_state:
 			LineState.IDLE:
 				# pull back on line
@@ -70,7 +78,7 @@ func _input(event: InputEvent) -> void:
 							# show "hold down mouse" label
 							pass
 			LineState.PRIMED:
-				if event.relative.x >= 0.2:
+				if event.relative.x >= 0.2 and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 					set_current_state(LineState.CASTING)
 					$hook.freeze = false
 			LineState.CASTING:

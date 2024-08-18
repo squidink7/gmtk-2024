@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bcng7oncj7wa2"
+path="res://.godot/imported/holding tension.ogg-1ecfa784f7aacb6344dd7751c532556e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/holding tension.ogg"
+dest_files=["res://.godot/imported/holding tension.ogg-1ecfa784f7aacb6344dd7751c532556e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

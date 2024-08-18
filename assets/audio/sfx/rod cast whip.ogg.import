@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbabb8dmsrls1"
+path="res://.godot/imported/rod cast whip.ogg-a591c86d67a923204c00ed40b94819f5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/rod cast whip.ogg"
+dest_files=["res://.godot/imported/rod cast whip.ogg-a591c86d67a923204c00ed40b94819f5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

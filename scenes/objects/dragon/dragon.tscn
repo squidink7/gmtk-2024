@@ -1,28 +1,33 @@
-[gd_scene load_steps=20 format=3 uid="uid://dus2pvokunekl"]
+[gd_scene load_steps=14 format=3 uid="uid://dus2pvokunekl"]
 
 [ext_resource type="Script" path="res://scenes/objects/dragon/dragon.gd" id="1_gfpmt"]
-[ext_resource type="Texture2D" uid="uid://mg2yahbyxb7h" path="res://assets/textures/objects/dragon/idle_animation/idle1.png" id="1_moeu6"]
+[ext_resource type="Texture2D" uid="uid://bvnwnq6dcds4i" path="res://assets/textures/objects/dragon/idle_animation/idle1.png" id="1_moeu6"]
+[ext_resource type="Texture2D" uid="uid://c7o1o4hc86n7f" path="res://assets/textures/objects/dragon/cast_animation/cast3.png" id="2_1xruk"]
 [ext_resource type="PackedScene" uid="uid://di0q22nm63s3r" path="res://scenes/objects/fishing_line/fishing_line.tscn" id="2_2f20c"]
-[ext_resource type="Texture2D" uid="uid://c3c0kw5hcmdi5" path="res://assets/textures/objects/dragon/idle_animation/idle2.png" id="2_nkwuv"]
-[ext_resource type="Texture2D" uid="uid://bs87gob1eoiu4" path="res://assets/textures/objects/dragon/idle_animation/idle3.png" id="3_3ka3o"]
-[ext_resource type="Texture2D" uid="uid://c84cp7wnfigky" path="res://assets/textures/objects/dragon/idle_animation/idle4.png" id="4_rfrkk"]
-[ext_resource type="Texture2D" uid="uid://b422nt8khrbko" path="res://assets/textures/objects/dragon/idle_animation/idle5.png" id="5_d36j6"]
-[ext_resource type="Texture2D" uid="uid://bq2gs1skvk5qx" path="res://assets/textures/objects/dragon/idle_animation/idle6.png" id="6_fcc5c"]
-[ext_resource type="Texture2D" uid="uid://d1yl8xeb3g7o5" path="res://assets/textures/objects/dragon/idle_animation/idle7.png" id="7_1uhbi"]
-[ext_resource type="Texture2D" uid="uid://djfdcftwy70lk" path="res://assets/textures/objects/dragon/idle_animation/idle8.png" id="8_c24bx"]
-[ext_resource type="Texture2D" uid="uid://jp0gyih77rxa" path="res://assets/textures/objects/dragon/idle_animation/idle9.png" id="9_ilhc7"]
-[ext_resource type="Texture2D" uid="uid://c7ul4tbg6oyl1" path="res://assets/textures/objects/dragon/idle_animation/idle10.png" id="10_ofge0"]
-[ext_resource type="Texture2D" uid="uid://da6l0ex2pqqyn" path="res://assets/textures/objects/dragon/idle_animation/idle11.png" id="11_imdyv"]
-[ext_resource type="Texture2D" uid="uid://k3vp2o1evw31" path="res://assets/textures/objects/dragon/idle_animation/idle12.png" id="12_4oqo7"]
-[ext_resource type="Texture2D" uid="uid://l5cvxob4nprv" path="res://assets/textures/objects/dragon/idle_animation/idle13.png" id="13_eysl0"]
-[ext_resource type="Texture2D" uid="uid://cidkd3veywkcd" path="res://assets/textures/objects/dragon/idle_animation/idle14.png" id="14_chh0t"]
-[ext_resource type="Texture2D" uid="uid://ewpb5wt8wkae" path="res://assets/textures/objects/dragon/idle_animation/idle15.png" id="15_iuobp"]
-[ext_resource type="Texture2D" uid="uid://c4cisnov1psfm" path="res://assets/textures/objects/dragon/idle_animation/idle16.png" id="16_r7e86"]
+[ext_resource type="Texture2D" uid="uid://co64twhlcuh8g" path="res://assets/textures/objects/dragon/idle_animation/idle2.png" id="2_nkwuv"]
+[ext_resource type="Texture2D" uid="uid://0lcob88eqtcs" path="res://assets/textures/objects/dragon/idle_animation/idle3.png" id="3_3ka3o"]
+[ext_resource type="Texture2D" uid="uid://drahh5gfhwa44" path="res://assets/textures/objects/dragon/cast_animation/cast4.png" id="3_jjtfd"]
+[ext_resource type="Texture2D" uid="uid://p4jlgjvum8vm" path="res://assets/textures/objects/dragon/cast_animation/cast5.png" id="4_wjgvv"]
+[ext_resource type="Texture2D" uid="uid://buw0yovq7uo1m" path="res://assets/textures/objects/dragon/cast_animation/cast6.png" id="5_q4v34"]
+[ext_resource type="Texture2D" uid="uid://c5rv67s5wilcp" path="res://assets/textures/objects/dragon/cast_animation/cast1.png" id="23_ob010"]
+[ext_resource type="Texture2D" uid="uid://c5fxs70g3wkib" path="res://assets/textures/objects/dragon/cast_animation/cast2.png" id="24_0oeij"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l820e"]
 animations = [{
-"frames": [],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1xruk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jjtfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wjgvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q4v34")
+}],
+"loop": false,
 "name": &"cast",
 "speed": 5.0
 }, {
@@ -35,55 +40,31 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_3ka3o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_rfrkk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_d36j6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_fcc5c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_1uhbi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_c24bx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_ilhc7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_ofge0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_imdyv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_4oqo7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_eysl0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_chh0t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_iuobp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_r7e86")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 25.0
+"speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_ob010")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0oeij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1xruk")
+}],
 "loop": true,
 "name": &"prime",
 "speed": 5.0
 }]
+
+[sub_resource type="Curve2D" id="Curve2D_241uc"]
+_data = {
+"points": PackedVector2Array(0.941942, 1.88389, -0.941942, -1.88389, -24, 48, 70.0177, 25.7464, -70.0177, -25.7464, -72, -24, 0, 0, 0, 0, -280, 0)
+}
+point_count = 3
 
 [node name="Dragon" type="Node2D"]
 script = ExtResource("1_gfpmt")
@@ -92,7 +73,44 @@ script = ExtResource("1_gfpmt")
 position = Vector2(3.8147e-06, 4.76837e-06)
 scale = Vector2(4.39216, 4.39216)
 sprite_frames = SubResource("SpriteFrames_l820e")
-animation = &"idle"
+animation = &"cast"
+frame = 3
+frame_progress = 1.0
 
-[node name="FishingLine" parent="." instance=ExtResource("2_2f20c")]
-position = Vector2(88, -80)
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(88, -16)
+curve = SubResource("Curve2D_241uc")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-24, 48)
+rotation = -2.03444
+rotates = false
+
+[node name="fishingline" parent="Path2D/PathFollow2D" instance=ExtResource("2_2f20c")]
+unique_name_in_owner = true
+rotation = 2.03444
+
+[node name="primeanimpoints" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="primeanimpoints"]
+position = Vector2(64, -24)
+
+[node name="1" type="Marker2D" parent="primeanimpoints"]
+position = Vector2(-32, -96)
+
+[node name="2" type="Marker2D" parent="primeanimpoints"]
+position = Vector2(-192, -64)
+
+[node name="castanimpoints" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="castanimpoints"]
+position = Vector2(-192, -64)
+
+[node name="1" type="Marker2D" parent="castanimpoints"]
+position = Vector2(-96, -112)
+
+[node name="2" type="Marker2D" parent="castanimpoints"]
+position = Vector2(200, -32)
+
+[node name="3" type="Marker2D" parent="castanimpoints"]
+position = Vector2(200, -32)

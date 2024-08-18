@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d4f7oco5k3w00"
+path="res://.godot/imported/ticking clock.ogg-346038984eac75f7c9c5e9d2d7fcc82e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/ticking clock.ogg"
+dest_files=["res://.godot/imported/ticking clock.ogg-346038984eac75f7c9c5e9d2d7fcc82e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

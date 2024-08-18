@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://cn17or1r4gotd"
-=======
-uid="uid://dsfkx3n5xyvw6"
->>>>>>> c6ba1ba (boop)
-path="res://.godot/imported/fishman angry.png-1096540ca86fb12f997fe25d53f8b8bf.ctex"
+uid="uid://cprnf1ld0p36p"
+path="res://.godot/imported/cast7.png-9e6830271caaf9a0f64dfd064ae388fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish man/fishman angry.png"
-dest_files=["res://.godot/imported/fishman angry.png-1096540ca86fb12f997fe25d53f8b8bf.ctex"]
+source_file="res://assets/textures/objects/dragon/cast_animation/cast7.png"
+dest_files=["res://.godot/imported/cast7.png-9e6830271caaf9a0f64dfd064ae388fe.ctex"]
 
 [params]
 

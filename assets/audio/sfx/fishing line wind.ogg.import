@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cp8juvr27chij"
+path="res://.godot/imported/fishing line wind.ogg-8fae38608a8f02a193feda8c66475c05.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/fishing line wind.ogg"
+dest_files=["res://.godot/imported/fishing line wind.ogg-8fae38608a8f02a193feda8c66475c05.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
