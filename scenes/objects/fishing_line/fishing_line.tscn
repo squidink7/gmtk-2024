@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://di0q22nm63s3r"]
+[gd_scene load_steps=6 format=3 uid="uid://di0q22nm63s3r"]
 
 [ext_resource type="Script" path="res://scenes/objects/fishing_line/fishing_line.gd" id="1_u455m"]
 [ext_resource type="Script" path="res://scenes/objects/fishing_line/hook.gd" id="2_5rj3m"]
 [ext_resource type="Texture2D" uid="uid://ompqbm0dl2gj" path="res://icon.svg" id="2_oytqy"]
+[ext_resource type="AudioStream" uid="uid://v82e1rovkmao" path="res://assets/audio/sfx/release rod whoosh.wav" id="4_yuu17"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jixne"]
 radius = 16.0
@@ -24,3 +25,6 @@ texture = ExtResource("2_oytqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hook"]
 shape = SubResource("CircleShape2D_jixne")
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yuu17")
