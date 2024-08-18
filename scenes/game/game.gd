@@ -7,16 +7,11 @@ func _ready() -> void:
 	for i in range(100):
 		spawn_fish()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 func spawn_fish():
 	var fish = load('res://scenes/objects/fish/fish.tscn').instantiate()
 	$water.add_child(fish)
 	
 	# randomise point in the water
 	fish.global_position = $water/shape.global_position
-	fish.position.x += randi_range(-$water/shape.shape.size.x/2, $water/shape.shape.size.x/2)
-	fish.position.y += randi_range(-$water/shape.shape.size.y/2, $water/shape.shape.size.y/2)
+	fish.position.x += randi_range(-$water/shape.shape.size.x/2+80, $water/shape.shape.size.x/2-80)
+	fish.position.y += randi_range(-$water/shape.shape.size.y/2+80, $water/shape.shape.size.y/2-80)

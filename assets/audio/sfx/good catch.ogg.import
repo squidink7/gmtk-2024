@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dnvipaxxyfvww"
+path="res://.godot/imported/good catch.ogg-e2f6b19677f057b1d6636fcca9c8b66e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/good catch.ogg"
+dest_files=["res://.godot/imported/good catch.ogg-e2f6b19677f057b1d6636fcca9c8b66e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
