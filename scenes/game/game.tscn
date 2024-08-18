@@ -8,13 +8,13 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o68nb"]
-size = Vector2(896, 392)
+size = Vector2(1664, 392)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_3iu1x")
 
 [node name="Dragon" parent="." instance=ExtResource("1_p4ryi")]
-position = Vector2(128, 168)
+position = Vector2(216, 144)
 
 [node name="boundry" type="Area2D" parent="."]
 position = Vector2(3776, 248)
@@ -28,7 +28,7 @@ shape = SubResource("WorldBoundaryShape2D_jxhwa")
 script = ExtResource("1_gxcjl")
 
 [node name="shape" type="CollisionShape2D" parent="water"]
-position = Vector2(704, 452)
+position = Vector2(1152, 448)
 shape = SubResource("RectangleShape2D_o68nb")
 
 [node name="camera" type="Camera2D" parent="."]

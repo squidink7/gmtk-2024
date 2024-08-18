@@ -29,7 +29,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"cast",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -73,22 +73,32 @@ script = ExtResource("1_gfpmt")
 position = Vector2(3.8147e-06, 4.76837e-06)
 scale = Vector2(4.39216, 4.39216)
 sprite_frames = SubResource("SpriteFrames_l820e")
-animation = &"cast"
-frame = 3
-frame_progress = 1.0
+animation = &"prime"
+frame_progress = 0.894117
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="hookpath" type="Path2D" parent="."]
 position = Vector2(88, -16)
 curve = SubResource("Curve2D_241uc")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+[node name="pathfollow" type="PathFollow2D" parent="hookpath"]
 position = Vector2(-24, 48)
 rotation = -2.03444
 rotates = false
 
-[node name="fishingline" parent="Path2D/PathFollow2D" instance=ExtResource("2_2f20c")]
+[node name="fishingline" parent="hookpath/pathfollow" instance=ExtResource("2_2f20c")]
 unique_name_in_owner = true
 rotation = 2.03444
+
+[node name="idleanimpoints" type="Node2D" parent="."]
+
+[node name="0" type="Marker2D" parent="idleanimpoints"]
+position = Vector2(64, -48)
+
+[node name="1" type="Marker2D" parent="idleanimpoints"]
+position = Vector2(64, -48)
+
+[node name="2" type="Marker2D" parent="idleanimpoints"]
+position = Vector2(64, -56)
 
 [node name="primeanimpoints" type="Node2D" parent="."]
 
