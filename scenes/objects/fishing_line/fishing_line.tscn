@@ -15,6 +15,7 @@ points = PackedVector2Array(0, 0, 0, 0)
 width = 2.0
 
 [node name="hook" type="RigidBody2D" parent="."]
+lock_rotation = true
 script = ExtResource("2_5rj3m")
 
 [node name="sprite" type="Sprite2D" parent="hook"]

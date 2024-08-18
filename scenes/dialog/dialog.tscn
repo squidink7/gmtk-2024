@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/dialog/dialog.gd" id="1_0ki2f"]
 [ext_resource type="Texture2D" uid="uid://27so1fcclu0d" path="res://assets/textures/objects/wizard/speak.png" id="2_3ho30"]
-[ext_resource type="AudioStream" uid="uid://dl0y55e3mp3fs" path="res://assets/audio/sfx/wizard pop-up.ogg" id="3_qa331"]
+[ext_resource type="AudioStream" uid="uid://b1udpe25crhem" path="res://assets/audio/sfx/wizard pop-up.ogg" id="3_qa331"]
 
 [node name="dialog" type="CanvasLayer"]
 script = ExtResource("1_0ki2f")
