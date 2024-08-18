@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5g8oygc5vxmn"
+path="res://.godot/imported/wizard speak.ogg-96cd0ff4af6069c5afc8e3b8b76ba40d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/wizard speak.ogg"
+dest_files=["res://.godot/imported/wizard speak.ogg-96cd0ff4af6069c5afc8e3b8b76ba40d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
