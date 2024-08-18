@@ -74,7 +74,7 @@ position = Vector2(3.8147e-06, 4.76837e-06)
 scale = Vector2(4.39216, 4.39216)
 sprite_frames = SubResource("SpriteFrames_l820e")
 animation = &"prime"
-frame_progress = 0.894117
+frame_progress = 0.708394
 
 [node name="hookpath" type="Path2D" parent="."]
 position = Vector2(88, -16)
@@ -84,6 +84,7 @@ curve = SubResource("Curve2D_241uc")
 position = Vector2(-24, 48)
 rotation = -2.03444
 rotates = false
+cubic_interp = false
 
 [node name="fishingline" parent="hookpath/pathfollow" instance=ExtResource("2_2f20c")]
 unique_name_in_owner = true

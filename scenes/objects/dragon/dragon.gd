@@ -13,9 +13,10 @@ func _process(delta: float) -> void:
 			$sprite.stop()
 		var frame = int(%fishingline.state_progress * 3)
 		$sprite.frame = frame
-		%fishingline.set_line_origin($primeanimpoints.get_child(frame).global_position)
+		
+		$hookpath/pathfollow.progress_ratio = clamp(%fishingline.state_progress, 0, 1)
+		%fishingline.set_line_origin($primeanimpoints.get_child($sprite.frame).global_position)
 
-		$hookpath/pathfollow.progress_ratio = %fishingline.state_progress
 
 	elif %fishingline.current_state == %fishingline.LineState.IDLE and %fishingline.state_progress == 0:
 		if $sprite.animation != 'idle':
