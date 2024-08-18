@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brgdkhqmefdol"
-path="res://.godot/imported/IMG_0375.png-b3b8c7b4483ffbe6534728d9ac77d5fd.ctex"
+uid="uid://dw4e11nosplcw"
+path="res://.godot/imported/Can.png-457419c544f8e895790c46f357314f16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/dragon/idle_animation/IMG_0375.png"
-dest_files=["res://.godot/imported/IMG_0375.png-b3b8c7b4483ffbe6534728d9ac77d5fd.ctex"]
+source_file="res://assets/textures/objects/fish/Can.png"
+dest_files=["res://.godot/imported/Can.png-457419c544f8e895790c46f357314f16.ctex"]
 
 [params]
 
