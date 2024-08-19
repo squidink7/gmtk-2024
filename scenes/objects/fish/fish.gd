@@ -1,3 +1,5 @@
+class_name Fish
+
 extends CharacterBody2D
 
 var curiosity: float = 1
@@ -31,12 +33,18 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# stop chasing an already taken hook
+	if (current_state == FishState.CURIOUS or current_state == FishState.SEENHOOK) and hook != null and hook.caught_fish != null:
+		current_state = FishState.IDLE
+	
 	if current_state == FishState.SEENHOOK:
 		if randi_range(0, 100) == 0:
 			current_state = FishState.CURIOUS
 			target_position = hook.global_position
 		
 	if current_state == FishState.CURIOUS and reached_target():
+		print('caught')
+		hook.caught_fish = self
 		current_state = FishState.CAUGHT
 	
 	if current_state == FishState.IDLE or current_state == FishState.SEENHOOK:
@@ -61,6 +69,6 @@ func reached_target():
 	return (target_position - global_position).length_squared() < 8 or target_position == Vector2.ZERO
 
 func on_hook_area_enter(body: Node2D):
-	if body is FishHook:
+	if body is FishHook and body.get_line().current_state == body.get_line().LineState.FLOATING:
 		current_state = FishState.SEENHOOK
 		hook = body

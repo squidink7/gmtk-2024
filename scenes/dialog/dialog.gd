@@ -37,7 +37,7 @@ func next_line():
 	$character_timer.start()
 
 	# show line
-	%line_display.text = script_lines[current_line]
+	%line_display.text = '\n'+script_lines[current_line]
 
 	current_line += 1
 

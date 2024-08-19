@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	current_time += delta
-	if current_time % 30 >= fishing_checks:
+	if int(current_time) % 30 >= fishing_checks:
 		fishing_check()
 		fishing_checks += 1
 
