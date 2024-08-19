@@ -30,3 +30,6 @@ func spawn_fish():
 func fishing_check():
 	# spawn the fish environment protection police
 	pass
+
+func save_score():
+	pass
