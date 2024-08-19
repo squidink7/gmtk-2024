@@ -44,7 +44,7 @@ func _physics_process(delta: float) -> void:
 		LineState.CASTING:
 			fling_line()
 			# state_progress measures time left to add force to the flick
-			state_progress += 0.1
+			state_progress += 0.08
 			if state_progress >= 1:
 				set_current_state(LineState.CAST)
 		LineState.CAST:
@@ -98,5 +98,5 @@ func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if current_state != LineState.IDLE and current_state != LineState.PRIMED:
+			if current_state == LineState.FLOATING:
 				$hook.reel_in()
