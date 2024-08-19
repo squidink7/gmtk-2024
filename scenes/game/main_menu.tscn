@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfrhbw8n1nbfs"]
+[gd_scene load_steps=6 format=3 uid="uid://cfrhbw8n1nbfs"]
 
 [ext_resource type="Theme" uid="uid://cdvvw0o7t3cbx" path="res://assets/textures/themes/cyan_button.tres" id="1_p341h"]
+[ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="1_pg40r"]
+[ext_resource type="Theme" uid="uid://i6kx8kjksbm6" path="res://assets/textures/themes/dark_purple.tres" id="2_1k00p"]
+[ext_resource type="Theme" uid="uid://b0uyney330r04" path="res://assets/textures/themes/purple_button.tres" id="3_5wpqc"]
+[ext_resource type="Theme" uid="uid://c807kfj7tmlgl" path="res://assets/textures/themes/dark_red.tres" id="4_aktc3"]
 
 [node name="Main Menu" type="Node2D"]
 
@@ -15,7 +19,7 @@ offset_bottom = 106.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("1_p341h")
+theme = ExtResource("1_pg40r")
 text = "Continue"
 
 [node name="Button2" type="Button" parent="."]
@@ -29,47 +33,47 @@ offset_bottom = 482.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("1_p341h")
-text = "Continue"
+theme = ExtResource("2_1k00p")
+text = "Quit Game"
 
 [node name="Button3" type="Button" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 478.0
-offset_top = 318.0
-offset_right = 686.0
-offset_bottom = 380.0
+offset_left = 469.0
+offset_top = 225.0
+offset_right = 677.0
+offset_bottom = 287.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("1_p341h")
-text = "Continue"
+theme = ExtResource("3_5wpqc")
+text = "Settings"
 
 [node name="Button4" type="Button" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 478.0
-offset_top = 221.0
-offset_right = 686.0
-offset_bottom = 283.0
+offset_left = 470.0
+offset_top = 323.0
+offset_right = 678.0
+offset_bottom = 385.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("1_p341h")
-text = "Continue"
+theme = ExtResource("4_aktc3")
+text = "Exit to Title"
 
 [node name="Button5" type="Button" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 476.0
-offset_top = 126.0
-offset_right = 684.0
-offset_bottom = 188.0
+offset_left = 475.0
+offset_top = 131.0
+offset_right = 683.0
+offset_bottom = 193.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_p341h")
-text = "Continue"
+text = "Tutorial"
