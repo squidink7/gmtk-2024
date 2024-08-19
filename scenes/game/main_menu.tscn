@@ -97,3 +97,9 @@ z_index = -1
 position = Vector2(576, 97)
 scale = Vector2(4.4, 3.88571)
 texture = ExtResource("7_e8y7f")
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Exit to Title" to="." method="_on_exit_to_title_pressed"]
+[connection signal="pressed" from="Quit Game" to="." method="_on_quit_game_pressed"]
