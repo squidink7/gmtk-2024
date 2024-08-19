@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2mel54gscrei"]
+[gd_scene load_steps=6 format=3 uid="uid://c2mel54gscrei"]
 
 [ext_resource type="Script" path="res://scenes/dialog/dialog.gd" id="1_0ki2f"]
 [ext_resource type="Texture2D" uid="uid://27so1fcclu0d" path="res://assets/textures/objects/wizard/speak.png" id="2_3ho30"]
 [ext_resource type="Texture2D" uid="uid://c7f3rdyruouv6" path="res://assets/textures/objects/UI/Text_Box (1).png" id="3_1nsmr"]
 [ext_resource type="AudioStream" uid="uid://b5g8oygc5vxmn" path="res://assets/audio/sfx/wizard speak.ogg" id="3_77peb"]
+[ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="4_vdnar"]
 
 [node name="dialog" type="CanvasLayer"]
 script = ExtResource("1_0ki2f")
@@ -51,7 +52,6 @@ offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_1nsmr")
-stretch_mode = 4
 
 [node name="line_display" type="RichTextLabel" parent="scroll"]
 unique_name_in_owner = true
@@ -63,9 +63,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 19.0
 offset_top = 36.0
+offset_right = -313.0
 offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("4_vdnar")
+bbcode_enabled = true
 text = "Dialog text goes here"
 
 [node name="character_timer" type="Timer" parent="."]
