@@ -6,6 +6,8 @@ var current_state = LineState.IDLE
 var state_progress: float = 0.0
 var cast_force: float = 0
 
+signal caught_fish
+
 enum LineState {
 	IDLE,
 	PRIMED,
@@ -42,7 +44,7 @@ func _physics_process(delta: float) -> void:
 			# $audio/tension.play()
 		
 		LineState.CASTING:
-			fling_line()
+			fling_line(delta)
 			# state_progress measures time left to add force to the flick
 			state_progress += 0.08
 			if state_progress >= 1:
@@ -58,8 +60,8 @@ func set_current_state(state):
 	current_state = state
 	state_progress = 0
 
-func fling_line():
-	cast_force -= 0.1
+func fling_line(delta: float):
+	cast_force -= 0.1 * delta * 60
 	cast_force = max(cast_force, 0)
 	$hook.apply_central_force(Vector2(cast_force, -cast_force/2))
 
@@ -94,9 +96,12 @@ func _input(event: InputEvent) -> void:
 			LineState.CASTING:
 				# flick line forward
 				if event.relative.x > 0:
+					# this does *not* scale with delta, should fix
 					cast_force += event.relative.x * 10
 	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if current_state == LineState.FLOATING:
-				$hook.reel_in()
+				var fish = await $hook.reel_in()
+				if fish != null:
+					caught_fish.emit()

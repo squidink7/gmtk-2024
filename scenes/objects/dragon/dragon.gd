@@ -1,6 +1,8 @@
 extends Node2D
 
 
+signal add_score(score: int)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$sprite.play('idle')
@@ -31,3 +33,6 @@ func _process(delta: float) -> void:
 			$sprite.play('cast')
 
 		%fishingline.set_line_origin($castanimpoints.get_child($sprite.frame).global_position)
+
+func caught_fish():
+	add_score.emit(1)

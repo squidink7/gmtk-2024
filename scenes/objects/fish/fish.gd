@@ -40,12 +40,12 @@ func _process(delta: float) -> void:
 	if current_state == FishState.SEENHOOK:
 		if randi_range(0, 100) == 0:
 			current_state = FishState.CURIOUS
-			target_position = hook.global_position
 		
 	if current_state == FishState.CURIOUS and reached_target():
-		print('caught')
 		hook.caught_fish = self
 		current_state = FishState.CAUGHT
+	elif current_state == FishState.CURIOUS:
+		target_position = hook.global_position
 	
 	if current_state == FishState.IDLE or current_state == FishState.SEENHOOK:
 		# find new spot
@@ -60,10 +60,11 @@ func _process(delta: float) -> void:
 
 			# ensure fish stays in water
 			target_position = target_position.clamp(water_shape.global_position-water_shape.shape.size/2+Vector2(80,80), water_shape.global_position+water_shape.shape.size/2-Vector2(80,80))
-		
-	var movevec = (target_position - global_position)
-	velocity = movevec * 2
-	move_and_slide()
+	
+	if current_state != FishState.CAUGHT:
+		var movevec = (target_position - global_position)
+		velocity = movevec * 2
+		move_and_slide()
 
 func reached_target():
 	return (target_position - global_position).length_squared() < 8 or target_position == Vector2.ZERO

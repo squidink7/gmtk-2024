@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=8 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
 [ext_resource type="PackedScene" uid="uid://dus2pvokunekl" path="res://scenes/objects/dragon/dragon.tscn" id="1_p4ryi"]
 [ext_resource type="PackedScene" uid="uid://c2mel54gscrei" path="res://scenes/dialog/dialog.tscn" id="4_jlu1b"]
+[ext_resource type="PackedScene" uid="uid://duod4obs8vw35" path="res://scenes/hud/hud.tscn" id="5_2vejn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
 
@@ -41,5 +42,8 @@ limit_bottom = 648
 [node name="dialog" parent="." instance=ExtResource("4_jlu1b")]
 unique_name_in_owner = true
 
+[node name="hud" parent="." instance=ExtResource("5_2vejn")]
+
+[connection signal="add_score" from="Dragon" to="hud" method="add_score"]
 [connection signal="body_entered" from="boundry" to="boundry" method="on_boundry_entered"]
 [connection signal="body_entered" from="water" to="water" method="on_water_entered"]

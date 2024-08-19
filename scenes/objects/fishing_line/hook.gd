@@ -32,6 +32,11 @@ func reel_in():
 	await tween.finished
 	reset = true
 
+	var fish = caught_fish
+	caught_fish.queue_free()
+	caught_fish = null
+	return fish
+
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if reset:
 		reset = false
