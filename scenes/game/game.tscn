@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=15 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://isvtjrakmt8b" path="res://assets/textures/environment/water/top/water_top2.png" id="7_bpo6j"]
 [ext_resource type="Texture2D" uid="uid://b7je8qnykeod4" path="res://assets/textures/environment/water/top/water_top3.png" id="8_litcd"]
 [ext_resource type="Texture2D" uid="uid://dljpwn14wea21" path="res://assets/textures/environment/water/top/water_top4.png" id="9_jygpv"]
+[ext_resource type="PackedScene" uid="uid://cfrhbw8n1nbfs" path="res://scenes/game/main_menu.tscn" id="12_cwoi5"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
 
@@ -82,6 +83,9 @@ texture = ExtResource("9_jygpv")
 unique_name_in_owner = true
 
 [node name="hud" parent="." instance=ExtResource("5_2vejn")]
+
+[node name="Main Menu" parent="." instance=ExtResource("12_cwoi5")]
+visible = false
 
 [connection signal="add_score" from="Dragon" to="hud" method="add_score"]
 [connection signal="body_entered" from="boundry" to="boundry" method="on_boundry_entered"]
