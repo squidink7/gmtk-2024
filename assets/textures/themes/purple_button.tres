@@ -1,21 +1,21 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://b0uyney330r04"]
 
-[ext_resource type="Texture2D" uid="uid://x110jsm7x40p" path="res://assets/textures/objects/Buttons/IMG_0156.PNG" id="1_nq53c"]
-[ext_resource type="Texture2D" uid="uid://cl7xt5m3e67if" path="res://assets/textures/objects/Buttons/clicked/Clicked_Button (3).png" id="2_fcxfp"]
+[ext_resource type="Texture2D" uid="uid://i3x6ass8hxvi" path="res://assets/textures/objects/New buttons/Button (2).png" id="1_b2mad"]
+[ext_resource type="Texture2D" uid="uid://bc7mpfewei0m6" path="res://assets/textures/objects/New buttons/Clicked_Button (2).png" id="2_a2hgg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7im12"]
-texture = ExtResource("1_nq53c")
-texture_margin_left = 6.0
-texture_margin_top = 9.0
-texture_margin_right = 6.0
-texture_margin_bottom = 7.0
+texture = ExtResource("1_b2mad")
+texture_margin_left = 20.0
+texture_margin_top = 18.0
+texture_margin_right = 20.0
+texture_margin_bottom = 18.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loq1j"]
-texture = ExtResource("2_fcxfp")
-texture_margin_left = 9.0
-texture_margin_top = 8.0
-texture_margin_right = 6.0
-texture_margin_bottom = 7.0
+texture = ExtResource("2_a2hgg")
+texture_margin_left = 20.0
+texture_margin_top = 25.0
+texture_margin_right = 20.0
+texture_margin_bottom = 18.0
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)

@@ -1,14 +1,14 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://i6kx8kjksbm6"]
 
-[ext_resource type="Texture2D" uid="uid://b5s76btb8feuc" path="res://assets/textures/objects/Buttons/IMG_0159.PNG" id="1_0lfrj"]
+[ext_resource type="Texture2D" uid="uid://b23wvixv1cjbo" path="res://assets/textures/objects/New buttons/Clicked_Button (4).png" id="1_2ppku"]
 [ext_resource type="Texture2D" uid="uid://cjykq5hgvegkr" path="res://assets/textures/objects/Buttons/clicked/Clicked_Button.png" id="2_ix0tg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7im12"]
-texture = ExtResource("1_0lfrj")
-texture_margin_left = 6.0
-texture_margin_top = 9.0
-texture_margin_right = 6.0
-texture_margin_bottom = 7.0
+texture = ExtResource("1_2ppku")
+texture_margin_left = 20.0
+texture_margin_top = 25.0
+texture_margin_right = 20.0
+texture_margin_bottom = 18.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loq1j"]
 texture = ExtResource("2_ix0tg")
