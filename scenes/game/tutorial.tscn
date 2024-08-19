@@ -1,3 +1,36 @@
-[gd_scene format=3 uid="uid://bs4mshg6n4hkh"]
+[gd_scene load_steps=4 format=3 uid="uid://bs4mshg6n4hkh"]
+
+[ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_gn3vc"]
+[ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_5o2du"]
+[ext_resource type="Script" path="res://scenes/game/back.gd" id="3_gln6o"]
 
 [node name="Tutorial" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 80.0
+offset_top = -8.0
+offset_right = 1216.0
+offset_bottom = 632.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_gn3vc")
+theme_override_font_sizes/normal_font_size = 200
+text = "uh hi...
+good luck"
+
+[node name="Back" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 640.0
+offset_top = 512.0
+offset_right = 904.0
+offset_bottom = 574.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_5o2du")
+text = "Back
+"
+script = ExtResource("3_gln6o")
+
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
