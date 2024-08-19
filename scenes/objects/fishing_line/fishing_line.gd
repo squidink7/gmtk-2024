@@ -16,6 +16,13 @@ enum LineState {
 	FLOATING
 }
 
+var sounds = {
+	'cast': load('res://assets/audio/sfx/rod cast whip.ogg'),
+	'reel_in': load('res://assets/audio/sfx/rod reel in.ogg'),
+	'prime_start': load('res://assets/audio/sfx/rod initial pull-back.ogg'),
+	'prime': load('res://assets/audio/sfx/pull-back buildup.ogg'),
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -90,7 +97,8 @@ func _input(event: InputEvent) -> void:
 			LineState.PRIMED:
 				if event.relative.x >= 0.2 and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 					set_current_state(LineState.CASTING)
-					# $audio/cast.play()
+					# $audio.stream = load('res://gd.')
+					$audio.play()
 					$hook.freeze = false
 
 			LineState.CASTING:

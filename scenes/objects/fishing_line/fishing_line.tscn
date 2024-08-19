@@ -41,3 +41,5 @@ stream = ExtResource("4_1al1y")
 
 [node name="tension" type="AudioStreamPlayer" parent="audio3"]
 stream = ExtResource("6_eigvm")
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
