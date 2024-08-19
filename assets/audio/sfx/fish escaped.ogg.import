@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2rmkw5015mgr"
+path="res://.godot/imported/fish escaped.ogg-44f27de614ef3f967877e8a742592104.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/fish escaped.ogg"
+dest_files=["res://.godot/imported/fish escaped.ogg-44f27de614ef3f967877e8a742592104.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

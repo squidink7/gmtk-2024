@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxnmbn64pqo78"]
+
+[ext_resource type="Texture2D" uid="uid://cmktkhou2yym1" path="res://assets/textures/environment/water/bottom/water_bottom.png" id="1_tmqho"]
+[ext_resource type="Texture2D" uid="uid://n0s543tdtv2a" path="res://assets/textures/environment/water/middle/water_middle.png" id="2_la8ip"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WaterBottom" type="Sprite2D" parent="."]
+position = Vector2(219.625, 360.375)
+scale = Vector2(4.61842, 3.47549)
+texture = ExtResource("1_tmqho")
+
+[node name="WaterMiddle" type="Sprite2D" parent="."]
+position = Vector2(220.625, 186)
+scale = Vector2(4.59737, 3.91176)
+texture = ExtResource("2_la8ip")

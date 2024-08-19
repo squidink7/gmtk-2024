@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bklm82s2nske7"
+path="res://.godot/imported/fish hooked.ogg-0cede6178c295342dd3e59e8ed852e3a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/fish hooked.ogg"
+dest_files=["res://.godot/imported/fish hooked.ogg-0cede6178c295342dd3e59e8ed852e3a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ctbneepnw3yeu"
+path="res://.godot/imported/ministry approach.ogg-6e951c76bf13c270a401f9bf5467ec83.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/ministry approach.ogg"
+dest_files=["res://.godot/imported/ministry approach.ogg-6e951c76bf13c270a401f9bf5467ec83.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

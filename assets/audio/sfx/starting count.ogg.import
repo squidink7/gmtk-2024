@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhp74ujq5fmg2"
+path="res://.godot/imported/starting count.ogg-0ca08e9cccaaef39f4b494eb28d2c4ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/starting count.ogg"
+dest_files=["res://.godot/imported/starting count.ogg-0ca08e9cccaaef39f4b494eb28d2c4ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
