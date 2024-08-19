@@ -1,10 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=14 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
 [ext_resource type="PackedScene" uid="uid://dus2pvokunekl" path="res://scenes/objects/dragon/dragon.tscn" id="1_p4ryi"]
+[ext_resource type="Texture2D" uid="uid://cmktkhou2yym1" path="res://assets/textures/environment/water/bottom/water_bottom.png" id="4_0kqdm"]
 [ext_resource type="PackedScene" uid="uid://c2mel54gscrei" path="res://scenes/dialog/dialog.tscn" id="4_jlu1b"]
 [ext_resource type="PackedScene" uid="uid://duod4obs8vw35" path="res://scenes/hud/hud.tscn" id="5_2vejn"]
+[ext_resource type="Texture2D" uid="uid://n0s543tdtv2a" path="res://assets/textures/environment/water/middle/water_middle.png" id="5_30xf2"]
+[ext_resource type="Texture2D" uid="uid://bqhhawq3pm53d" path="res://assets/textures/environment/water/top/water_top1.png" id="5_eyw06"]
+[ext_resource type="Texture2D" uid="uid://isvtjrakmt8b" path="res://assets/textures/environment/water/top/water_top2.png" id="7_bpo6j"]
+[ext_resource type="Texture2D" uid="uid://b7je8qnykeod4" path="res://assets/textures/environment/water/top/water_top3.png" id="8_litcd"]
+[ext_resource type="Texture2D" uid="uid://dljpwn14wea21" path="res://assets/textures/environment/water/top/water_top4.png" id="9_jygpv"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
 
@@ -25,19 +31,49 @@ script = ExtResource("1_gxcjl")
 rotation = -1.5708
 shape = SubResource("WorldBoundaryShape2D_jxhwa")
 
-[node name="water" type="Area2D" parent="."]
-script = ExtResource("1_gxcjl")
-
-[node name="shape" type="CollisionShape2D" parent="water"]
-position = Vector2(1152, 448)
-shape = SubResource("RectangleShape2D_o68nb")
-
 [node name="camera" type="Camera2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, 648)
 rotation = 0.0024124
 limit_left = 0
 limit_bottom = 648
+
+[node name="water" type="Area2D" parent="."]
+script = ExtResource("1_gxcjl")
+
+[node name="shape" type="CollisionShape2D" parent="water"]
+position = Vector2(1146, 448)
+shape = SubResource("RectangleShape2D_o68nb")
+
+[node name="WaterBottom" type="Sprite2D" parent="water"]
+position = Vector2(1145, 629)
+scale = Vector2(17.4947, 0.666666)
+texture = ExtResource("4_0kqdm")
+
+[node name="WaterTop1" type="Sprite2D" parent="water"]
+position = Vector2(1160.75, 273)
+scale = Vector2(17.8263, 4.03922)
+texture = ExtResource("5_eyw06")
+
+[node name="WaterMiddle" type="Sprite2D" parent="water"]
+position = Vector2(1147, 485)
+scale = Vector2(17.5132, 4.95098)
+texture = ExtResource("5_30xf2")
+
+[node name="WaterTop2" type="Sprite2D" parent="water"]
+position = Vector2(1150, 291)
+scale = Vector2(17.5158, 3.63725)
+texture = ExtResource("7_bpo6j")
+
+[node name="WaterTop3" type="Sprite2D" parent="water"]
+position = Vector2(1148.5, 293)
+scale = Vector2(17.6105, 4.07843)
+texture = ExtResource("8_litcd")
+
+[node name="WaterTop4" type="Sprite2D" parent="water"]
+position = Vector2(1144, 276)
+scale = Vector2(17.6, 3.71569)
+texture = ExtResource("9_jygpv")
 
 [node name="dialog" parent="." instance=ExtResource("4_jlu1b")]
 unique_name_in_owner = true
