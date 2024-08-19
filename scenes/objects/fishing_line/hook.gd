@@ -33,8 +33,9 @@ func reel_in():
 	reset = true
 
 	var fish = caught_fish
-	caught_fish.queue_free()
-	caught_fish = null
+	if fish != null:
+		caught_fish.queue_free()
+		caught_fish = null
 	return fish
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
