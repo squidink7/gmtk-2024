@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		LineState.IDLE:
 			$hook.freeze = true
 			# pull hook back to idle if user doesn't keep pulling
-			state_progress -= 0.05
+			state_progress -= 0.01
 			state_progress = max(state_progress, 0)
 			# $audio.stream.
 
@@ -81,7 +81,7 @@ func _input(event: InputEvent) -> void:
 				if event.relative.x < 0:
 					# only draw back when holding the mouse button
 					if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-						state_progress -= max(event.relative.x / 100, -0.15)
+						state_progress -= max(event.relative.x / 200, -0.03)
 					else:
 						if event.relative.x <= -0.15:
 							# show "hold down mouse" label
