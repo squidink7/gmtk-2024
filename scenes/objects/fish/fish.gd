@@ -34,7 +34,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# stop chasing an already taken hook
-	if (current_state == FishState.CURIOUS or current_state == FishState.SEENHOOK) and hook != null and hook.caught_fish != null:
+	if (current_state == FishState.CURIOUS or current_state == FishState.SEENHOOK) and hook != null and (hook.caught_fish != null or hook.get_line().current_state != hook.get_line().LineState.FLOATING):
 		current_state = FishState.IDLE
 	
 	if current_state == FishState.SEENHOOK:
