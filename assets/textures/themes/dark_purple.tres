@@ -1,26 +1,28 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://i6kx8kjksbm6"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://i6kx8kjksbm6"]
 
 [ext_resource type="Texture2D" uid="uid://b23wvixv1cjbo" path="res://assets/textures/objects/New buttons/Clicked_Button (4).png" id="1_2ppku"]
-[ext_resource type="Texture2D" uid="uid://cjykq5hgvegkr" path="res://assets/textures/objects/Buttons/clicked/Clicked_Button.png" id="2_ix0tg"]
+[ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="1_wu3uv"]
+[ext_resource type="Texture2D" uid="uid://c1pc3tuxopxbg" path="res://assets/textures/objects/New buttons/Button (4).png" id="2_kjp6k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7im12"]
+texture = ExtResource("2_kjp6k")
+texture_margin_left = 20.0
+texture_margin_top = 18.0
+texture_margin_right = 20.0
+texture_margin_bottom = 18.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loq1j"]
 texture = ExtResource("1_2ppku")
 texture_margin_left = 20.0
 texture_margin_top = 25.0
 texture_margin_right = 20.0
 texture_margin_bottom = 18.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loq1j"]
-texture = ExtResource("2_ix0tg")
-texture_margin_left = 9.0
-texture_margin_top = 8.0
-texture_margin_right = 6.0
-texture_margin_bottom = 7.0
-
 [resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(0.400696, 0.400698, 0.400699, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_wu3uv")
 Button/styles/hover = SubResource("StyleBoxTexture_7im12")
 Button/styles/normal = SubResource("StyleBoxTexture_7im12")
 Button/styles/pressed = SubResource("StyleBoxTexture_loq1j")

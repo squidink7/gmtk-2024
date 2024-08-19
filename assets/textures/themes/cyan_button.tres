@@ -1,5 +1,6 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cdvvw0o7t3cbx"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cdvvw0o7t3cbx"]
 
+[ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="1_jcpt7"]
 [ext_resource type="Texture2D" uid="uid://be6ltd0brlxhe" path="res://assets/textures/objects/New buttons/Button.png" id="1_r0xlt"]
 [ext_resource type="Texture2D" uid="uid://d37bb3s34hwce" path="res://assets/textures/objects/New buttons/Clicked_Button.png" id="2_p7pty"]
 
@@ -21,6 +22,7 @@ texture_margin_bottom = 18.0
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0.400696, 0.400698, 0.400699, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_jcpt7")
 Button/styles/hover = SubResource("StyleBoxTexture_7im12")
 Button/styles/normal = SubResource("StyleBoxTexture_7im12")
 Button/styles/pressed = SubResource("StyleBoxTexture_loq1j")
