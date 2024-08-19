@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfrhbw8n1nbfs"]
+
+[ext_resource type="Theme" uid="uid://cdvvw0o7t3cbx" path="res://assets/textures/themes/cyan_button.tres" id="1_p341h"]
+
+[node name="Main Menu" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 473.0
+offset_top = 64.0
+offset_right = 695.0
+offset_bottom = 127.0
+theme = ExtResource("1_p341h")
+text = "Continue"
