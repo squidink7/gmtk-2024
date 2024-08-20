@@ -42,6 +42,15 @@ func next_line():
 		
 		update_character_texture()
 		current_line += 1
+		if current_line >= len(script_lines):
+			close_dialog()
+			return
+	
+	while script_lines[current_line] == '':
+		current_line += 1
+		if current_line >= len(script_lines):
+			close_dialog()
+			return
 	
 	# play voice line
 	$voice.play()
