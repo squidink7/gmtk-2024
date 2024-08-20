@@ -32,8 +32,7 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_1jnic")
-text = "Back
-"
+text = "Play"
 script = ExtResource("3_hjobn")
 
 [node name="Dragon" type="Sprite2D" parent="."]
