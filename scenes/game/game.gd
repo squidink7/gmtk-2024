@@ -17,7 +17,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if current_time != -1:
 		current_time += delta
-	if int(current_time) % 30 >= fishing_checks:
+	if int(current_time) / 10 > fishing_checks:
+		if fishing_checks == 0:
+			$dialog.run_script('inspector/inspectorintro')
+		
 		fishing_check()
 		fishing_checks += 1
 
@@ -45,9 +48,11 @@ func fishing_check():
 			files.append(file_name)
 		file_name = dir.get_next()
 
+	print(files)
+	print(len(files))
 	var randfile = randi_range(0, len(files)-1)
 
-	await %dialog.run_script('inspector/pre-check/' + randfile)
+	await %dialog.run_script('inspector/pre-check/' + files[randfile].left(-4))
 
 	if $hud.score <= max_fish:
 		path = 'res://assets/scripts/inspector/pass/'
@@ -66,9 +71,9 @@ func fishing_check():
 	randfile = randi_range(0, len(files)-1)
 	
 	if $hud.score <= max_fish:
-		await %dialog.run_script('inspector/pass' + randfile)
+		await %dialog.run_script('inspector/pass' + files[randfile].left(-4))
 	else:
-		await %dialog.run_script('inspector/fail' + randfile)
+		await %dialog.run_script('inspector/fail' + files[randfile].left(-4))
 		get_tree().change_scene_to_file('res://scenes/game/main_menu.tscn')
 
 
