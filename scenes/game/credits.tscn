@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://h4iex8hf0u27"]
+[gd_scene load_steps=7 format=3 uid="uid://busnj2nrvahq6"]
 
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_lldkv"]
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_s4nlo"]
+[ext_resource type="AudioStream" uid="uid://drqhbxk8hikp2" path="res://assets/audio/sfx/button.ogg" id="3_2li7s"]
 [ext_resource type="Script" path="res://scenes/game/back.gd" id="3_t76ka"]
 [ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="4_erhds"]
-[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="4_nnyi1"]
 [ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="5_dpg6h"]
 
 [node name="Credits" type="Node2D"]
@@ -26,7 +26,7 @@ text = "Back
 script = ExtResource("3_t76ka")
 
 [node name="clicksound" type="AudioStreamPlayer2D" parent="Back"]
-stream = ExtResource("4_nnyi1")
+stream = ExtResource("3_2li7s")
 
 [node name="Sky" type="Sprite2D" parent="."]
 z_index = -1

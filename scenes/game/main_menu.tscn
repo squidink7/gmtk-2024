@@ -9,7 +9,7 @@
 [ext_resource type="Theme" uid="uid://c807kfj7tmlgl" path="res://assets/textures/themes/dark_red.tres" id="4_aktc3"]
 [ext_resource type="Texture2D" uid="uid://c7f3rdyruouv6" path="res://assets/textures/objects/UI/Text_Box (1).png" id="7_e8y7f"]
 [ext_resource type="Texture2D" uid="uid://cmktkhou2yym1" path="res://assets/textures/environment/water/bottom/water_bottom.png" id="9_t330k"]
-[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="10_74qga"]
+[ext_resource type="AudioStream" uid="uid://drqhbxk8hikp2" path="res://assets/audio/sfx/button.ogg" id="10_6yuoq"]
 [ext_resource type="AudioStream" uid="uid://bauwad4sguh4c" path="res://assets/audio/music/leviathan.ogg" id="11_uubv5"]
 
 [node name="Main Menu" type="Node2D"]
@@ -115,7 +115,7 @@ scale = Vector2(12.1263, 12.7059)
 texture = ExtResource("9_t330k")
 
 [node name="clicksound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_74qga")
+stream = ExtResource("10_6yuoq")
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_uubv5")
