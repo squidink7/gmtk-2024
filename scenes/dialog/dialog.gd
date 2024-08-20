@@ -38,7 +38,7 @@ func next_line():
 		character_textures = []
 		
 		for tex in character_texture_names:
-			character_textures.append(load('res://assets/textures/objects/' + tex + '.png'))
+			character_textures.append(ResourceLoader.load('res://assets/textures/objects/' + tex + '.png'))
 		
 		update_character_texture()
 		current_line += 1

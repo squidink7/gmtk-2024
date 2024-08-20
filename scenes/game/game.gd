@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 	
 
 func spawn_fish():
-	var fish = load('res://scenes/objects/fish/fish.tscn').instantiate()
+	var fish = ResourceLoader.load('res://scenes/objects/fish/fish.tscn').instantiate()
 	$water.add_child(fish)
 	
 	# randomise point in the water
@@ -47,8 +47,8 @@ func fishing_check():
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 	while file_name != "":
-		if not dir.current_is_dir() and not file_name.ends_with('.import'):
-			files.append(file_name)
+		if not dir.current_is_dir() and file_name.ends_with('.import'):
+			files.append(file_name.left(-7))
 		file_name = dir.get_next()
 
 	var randfile = randi_range(0, len(files)-1)
@@ -65,8 +65,8 @@ func fishing_check():
 	dir.list_dir_begin()
 	file_name = dir.get_next()
 	while file_name != "":
-		if not dir.current_is_dir() and not file_name.ends_with('.import'):
-			files.append(file_name)
+		if not dir.current_is_dir() and file_name.ends_with('.import'):
+			files.append(file_name.left(-7))
 		file_name = dir.get_next()
 
 	randfile = randi_range(0, len(files)-1)

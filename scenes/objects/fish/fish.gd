@@ -40,13 +40,13 @@ func _ready() -> void:
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 	while file_name != "":
-		if not dir.current_is_dir() and not file_name.ends_with('.import'):
-			files.append(file_name)
+		if not dir.current_is_dir() and file_name.ends_with('.import'):
+			files.append(file_name.left(-7))
 		file_name = dir.get_next()
 
 	var randfile = randi_range(0, len(files)-1)
 
-	$sprite.texture = load(path+files[randfile])
+	$sprite.texture = ResourceLoader.load(path+files[randfile])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
