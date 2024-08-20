@@ -1,29 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://cuybnrf5a6vo0"]
+[gd_scene load_steps=7 format=3 uid="uid://cuybnrf5a6vo0"]
 
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_n4agn"]
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_1jnic"]
 [ext_resource type="Script" path="res://scenes/game/back.gd" id="3_hjobn"]
+[ext_resource type="Texture2D" uid="uid://dphvy04ditv57" path="res://assets/textures/objects/dragon/dragon.png" id="4_jn7qy"]
+[ext_resource type="Texture2D" uid="uid://rwitrmdywqn1" path="res://assets/textures/objects/wizard/default.png" id="5_vp3d1"]
+[ext_resource type="Texture2D" uid="uid://d4c58fo7y4w8o" path="res://assets/textures/objects/fish/Beeg_Feesh.png" id="6_gpy7m"]
 
 [node name="Title" type="Node2D"]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 80.0
-offset_top = -28.0
-offset_right = 1216.0
-offset_bottom = 612.0
+offset_left = -352.0
+offset_top = 208.0
+offset_right = -16.0
+offset_bottom = 544.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_n4agn")
-theme_override_font_sizes/normal_font_size = 200
-text = "uh oh we didn't have time for this"
+theme_override_font_sizes/normal_font_size = 100
+text = "insert name here"
 
 [node name="Back" type="Button" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 848.0
-offset_top = 168.0
-offset_right = 1112.0
-offset_bottom = 230.0
+offset_left = 1392.0
+offset_top = 312.0
+offset_right = 1656.0
+offset_bottom = 374.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -31,5 +34,20 @@ theme = ExtResource("2_1jnic")
 text = "Back
 "
 script = ExtResource("3_hjobn")
+
+[node name="Dragon" type="Sprite2D" parent="."]
+position = Vector2(400, 344)
+scale = Vector2(14.3211, 14.3211)
+texture = ExtResource("4_jn7qy")
+
+[node name="Default" type="Sprite2D" parent="."]
+position = Vector2(1752, 48)
+scale = Vector2(10.25, 10.25)
+texture = ExtResource("5_vp3d1")
+
+[node name="BeegFeesh" type="Sprite2D" parent="."]
+position = Vector2(952, 536)
+scale = Vector2(6.5, 6.5)
+texture = ExtResource("6_gpy7m")
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
