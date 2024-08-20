@@ -13,6 +13,8 @@ func hit_water():
 	linear_damp = 10
 	var line = get_parent() as FishingLine
 	line.current_state = line.LineState.FLOATING
+	line.get_node('audio').stream = line.sounds['splash']
+	line.get_node('audio').play()
 	get_tree().create_tween().tween_property(self, 'gravity_scale', 0, 2)
 
 func _process(delta: float) -> void:

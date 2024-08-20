@@ -21,6 +21,7 @@ var sounds = {
 	'reel_in': load('res://assets/audio/sfx/rod reel in.ogg'),
 	'prime_start': load('res://assets/audio/sfx/rod initial pull-back.ogg'),
 	'primed': load('res://assets/audio/sfx/pull-back buildup.ogg'),
+	'splash': load('res://assets/audio/sfx/sinker splash.ogg'),
 }
 
 # Called when the node enters the scene tree for the first time.
