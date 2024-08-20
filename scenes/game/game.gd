@@ -6,7 +6,7 @@ var fishing_checks = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$dialog.run_script('intro')
-	%hud.high_score = high_score()
+	$hud.high_score = high_score()
 	for i in range(30):
 		spawn_fish()
 
@@ -35,7 +35,7 @@ func fishing_check():
 func high_score():
 	var save_file = ConfigFile.new()
 	save_file.load('user://highscore')
-	return int(save_file.get_value('high', 'score'))
+	return save_file.get_value('high', 'score', 0)
 
 func save_score(score):
 	var save_file = ConfigFile.new()
