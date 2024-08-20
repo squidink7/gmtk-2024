@@ -125,4 +125,6 @@ position = Vector2(200, -32)
 [node name="3" type="Marker2D" parent="castanimpoints"]
 position = Vector2(200, -32)
 
+[node name="audio" type="AudioStreamPlayer" parent="."]
+
 [connection signal="caught_fish" from="hookpath/pathfollow/fishingline" to="." method="caught_fish"]

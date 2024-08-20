@@ -21,28 +21,57 @@ theme_override_fonts/font = ExtResource("2_s6n4t")
 theme_override_font_sizes/font_size = 22
 text = "Score: 0"
 
+[node name="highscorelabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -208.0
+offset_top = 176.0
+offset_right = -16.0
+offset_bottom = 240.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_s6n4t")
+theme_override_font_sizes/font_size = 22
+text = "Hi Score: 0"
+
 [node name="timelabel" type="Label" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -194.0
-offset_top = 108.0
-offset_right = -2.0
-offset_bottom = 172.0
+offset_left = -184.0
+offset_top = 104.0
+offset_right = 8.0
+offset_bottom = 168.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_s6n4t")
 theme_override_font_sizes/font_size = 22
 text = "Time: 0"
 
-[node name="TextBox(1)" type="Sprite2D" parent="."]
+[node name="TextBox(1)" type="TextureRect" parent="."]
 z_index = -1
-position = Vector2(1032.64, 40.0625)
+offset_left = 920.0
+offset_top = 8.0
+offset_right = 1040.0
+offset_bottom = 43.0
 scale = Vector2(1.825, 1.825)
 texture = ExtResource("3_gnio6")
 
-[node name="TextBox(1)2" type="Sprite2D" parent="."]
+[node name="TextBox(1)2" type="TextureRect" parent="."]
 z_index = -1
-position = Vector2(1033.64, 112.063)
+offset_left = 920.0
+offset_top = 80.0
+offset_right = 1040.0
+offset_bottom = 115.0
+scale = Vector2(1.825, 1.825)
+texture = ExtResource("3_gnio6")
+
+[node name="TextBox(1)3" type="TextureRect" parent="."]
+z_index = -1
+offset_left = 920.0
+offset_top = 152.0
+offset_right = 1040.0
+offset_bottom = 187.0
 scale = Vector2(1.825, 1.825)
 texture = ExtResource("3_gnio6")

@@ -7,7 +7,7 @@ var max_fish = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$hud.high_score = high_score()
+	$hud.set_highscore(high_score())
 	for i in range(30):
 		spawn_fish()
 	
@@ -49,8 +49,6 @@ func fishing_check():
 			files.append(file_name)
 		file_name = dir.get_next()
 
-	print(files)
-	print(len(files))
 	var randfile = randi_range(0, len(files)-1)
 
 	await %dialog.run_script('inspector/pre-check/' + files[randfile].left(-4))
@@ -88,7 +86,3 @@ func save_score(score):
 	save_file.set_value('high', 'score', score)
 	save_file.set_value('high', 'time', current_time)
 	save_file.save('user://highscore')
-
-func _input(event):
-	if event.is_action_pressed("Pause"):
-		get_tree().change_scene_to_file('res://scenes/game/main_menu.tscn')
