@@ -19,3 +19,7 @@ func add_score(new_score: int):
 
 func set_time(time: int):
 	$timelabel.text = 'Time: ' + str(int(time/60)) + ':' + str(time%60)
+
+func set_highscore(score: int):
+	high_score = score
+	$highscorelabel.text = 'Hi Score: ' + str(score)
