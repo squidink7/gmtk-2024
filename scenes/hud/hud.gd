@@ -10,12 +10,12 @@ func set_score(new_score: int):
 	$scorelabel.text = 'Score: ' + str(score)
 
 	if score > high_score:
-		high_score = score
+		set_highscore(high_score)
 		new_highscore.emit(score)
 
 func add_score(new_score: int):
 	score += new_score
-	$scorelabel.text = 'Score: ' + str(score)
+	set_score(score)
 
 func set_time(time: int):
 	$timelabel.text = 'Time: ' + str(int(time/60)) + ':' + str(time%60)

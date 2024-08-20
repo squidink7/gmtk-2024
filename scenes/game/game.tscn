@@ -142,3 +142,4 @@ parameters/looping = true
 [connection signal="body_entered" from="water" to="water" method="on_water_entered"]
 [connection signal="add_score" from="Dragon" to="hud" method="add_score"]
 [connection signal="body_entered" from="boundry" to="boundry" method="on_boundry_entered"]
+[connection signal="new_highscore" from="hud" to="." method="save_score"]

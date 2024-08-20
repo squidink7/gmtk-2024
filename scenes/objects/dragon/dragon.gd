@@ -3,8 +3,8 @@ extends Node2D
 signal add_score(score: int)
 
 var sounds = {
-	'good_catch': load('res://assets/audio/sfx/good catch.ogg'),
-	'bad_catch': load('res://assets/audio/sfx/bad catch.ogg'),
+	'good_catch': ResourceLoader.load('res://assets/audio/sfx/good catch.ogg'),
+	'bad_catch': ResourceLoader.load('res://assets/audio/sfx/bad catch.ogg'),
 }
 
 # Called when the node enters the scene tree for the first time.
