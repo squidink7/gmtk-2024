@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0wx4atu3wl7u"]
+[gd_scene load_steps=6 format=3 uid="uid://c0wx4atu3wl7u"]
 
 [ext_resource type="Script" path="res://scenes/objects/fish/fish.gd" id="1_dq2r3"]
 
@@ -6,7 +6,10 @@
 radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wurst"]
-radius = 184.0
+radius = 128.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbbox"]
+radius = 32.9848
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_6mebm"]
 size = Vector2(16, 16)
@@ -22,6 +25,10 @@ disabled = true
 
 [node name="shape" type="CollisionShape2D" parent="hookdetector"]
 shape = SubResource("CircleShape2D_wurst")
+
+[node name="garbageshape" type="CollisionShape2D" parent="hookdetector"]
+shape = SubResource("CircleShape2D_tbbox")
+disabled = true
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(4.76837e-07, 4.76837e-07)

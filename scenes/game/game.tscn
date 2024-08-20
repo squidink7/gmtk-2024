@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=17 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dljpwn14wea21" path="res://assets/textures/environment/water/top/water_top4.png" id="9_jygpv"]
 [ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="12_hbywy"]
 [ext_resource type="Texture2D" uid="uid://ci7w8jdfwe3jl" path="res://assets/textures/environment/dirt.png" id="13_ckkli"]
+[ext_resource type="AudioStream" uid="uid://bokwhgtj4ao6w" path="res://assets/audio/music/chill arp.ogg" id="14_nov1l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o68nb"]
 size = Vector2(1664, 392)
@@ -30,8 +31,8 @@ position = Vector2(1146, 448)
 shape = SubResource("RectangleShape2D_o68nb")
 
 [node name="WaterBottom" type="Sprite2D" parent="water"]
-position = Vector2(1145, 629)
-scale = Vector2(17.4947, 0.666666)
+position = Vector2(1144, 627)
+scale = Vector2(17.5158, 0.745098)
 texture = ExtResource("4_0kqdm")
 
 [node name="WaterTop1" type="Sprite2D" parent="water"]
@@ -40,8 +41,8 @@ scale = Vector2(17.8263, 4.03922)
 texture = ExtResource("5_eyw06")
 
 [node name="WaterMiddle" type="Sprite2D" parent="water"]
-position = Vector2(1147, 485)
-scale = Vector2(17.5132, 4.95098)
+position = Vector2(1145.44, 485)
+scale = Vector2(17.5461, 4.95098)
 texture = ExtResource("5_30xf2")
 
 [node name="WaterTop2" type="Sprite2D" parent="water"]
@@ -55,8 +56,8 @@ scale = Vector2(17.6105, 4.07843)
 texture = ExtResource("8_litcd")
 
 [node name="WaterTop4" type="Sprite2D" parent="water"]
-position = Vector2(1144, 276)
-scale = Vector2(17.6, 3.71569)
+position = Vector2(1146, 276)
+scale = Vector2(17.5579, 3.71569)
 texture = ExtResource("9_jygpv")
 
 [node name="Dragon" parent="." instance=ExtResource("1_p4ryi")]
@@ -64,7 +65,7 @@ z_index = 1
 position = Vector2(216, 144)
 
 [node name="boundry" type="Area2D" parent="."]
-position = Vector2(3776, 248)
+position = Vector2(1984, 272)
 script = ExtResource("1_gxcjl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boundry"]
@@ -76,6 +77,7 @@ unique_name_in_owner = true
 position = Vector2(0, 648)
 rotation = 0.0024124
 limit_left = 0
+limit_right = 1984
 limit_bottom = 648
 
 [node name="dialog" parent="." instance=ExtResource("4_jlu1b")]
@@ -104,8 +106,8 @@ texture = ExtResource("13_ckkli")
 
 [node name="Dirt2" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(170, 395)
-scale = Vector2(3.61765, 3.61765)
+position = Vector2(167.081, 395)
+scale = Vector2(3.55619, 3.61765)
 texture = ExtResource("13_ckkli")
 
 [node name="Dirt3" type="Sprite2D" parent="."]
@@ -119,6 +121,11 @@ z_index = -4
 position = Vector2(170, 555)
 scale = Vector2(3.61765, 3.61765)
 texture = ExtResource("13_ckkli")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_nov1l")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="water" to="water" method="on_water_entered"]
 [connection signal="add_score" from="Dragon" to="hud" method="add_score"]

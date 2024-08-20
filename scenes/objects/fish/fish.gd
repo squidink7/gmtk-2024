@@ -24,7 +24,8 @@ func _ready() -> void:
 	# 1/4 fish are garbage
 	if randi() % 4 == 0:
 		is_garbage = true
-		# $hookdetector/shape.shape.radius /= 2
+		$hookdetector/shape.disabled = true
+		$hookdetector/garbageshape.disabled = false
 		path = 'res://assets/textures/objects/garbage/'
 	
 	var files = []

@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://chxsmsxy5vk2f"]
+[gd_scene load_steps=8 format=3 uid="uid://chxsmsxy5vk2f"]
 
+[ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="1_lnnow"]
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_n4agn"]
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_1jnic"]
 [ext_resource type="Script" path="res://scenes/game/back.gd" id="3_hjobn"]
@@ -7,7 +8,52 @@
 [ext_resource type="Texture2D" uid="uid://rwitrmdywqn1" path="res://assets/textures/objects/wizard/default.png" id="5_vp3d1"]
 [ext_resource type="Texture2D" uid="uid://d4c58fo7y4w8o" path="res://assets/textures/objects/fish/Beeg_Feesh.png" id="6_gpy7m"]
 
-[node name="Title" type="Node2D"]
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sky" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lnnow")
+
+[node name="Default" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -256.0
+offset_right = 32.0
+offset_bottom = -224.0
+grow_vertical = 0
+scale = Vector2(8.15625, 8.15625)
+texture = ExtResource("5_vp3d1")
+
+[node name="Dragon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 123.0
+offset_bottom = 75.0
+scale = Vector2(14.3211, 14.3211)
+texture = ExtResource("4_jn7qy")
+
+[node name="BeegFeesh" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 474.0
+offset_right = 864.0
+offset_bottom = 506.0
+scale = Vector2(5.4375, 5.4375)
+texture = ExtResource("6_gpy7m")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 z_index = 1
@@ -21,34 +67,22 @@ theme_override_font_sizes/normal_font_size = 100
 text = "insert name here"
 
 [node name="Back" type="Button" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 813.0
-offset_top = 317.0
-offset_right = 1077.0
-offset_bottom = 379.0
-grow_horizontal = 2
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = -36.0
+offset_right = -72.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_1jnic")
 text = "Play"
 script = ExtResource("3_hjobn")
-
-[node name="Dragon" type="Sprite2D" parent="."]
-position = Vector2(603, 344)
-scale = Vector2(14.3211, 14.3211)
-texture = ExtResource("4_jn7qy")
-
-[node name="Default" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(130, 518)
-scale = Vector2(8.15625, 8.15625)
-texture = ExtResource("5_vp3d1")
-
-[node name="BeegFeesh" type="Sprite2D" parent="."]
-position = Vector2(979, 562)
-scale = Vector2(5.4375, 5.4375)
-texture = ExtResource("6_gpy7m")
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

@@ -37,8 +37,13 @@ func _physics_process(delta: float) -> void:
 			# pull hook back to idle if user doesn't keep pulling
 			state_progress -= 0.01
 			state_progress = max(state_progress, 0)
-			$audio.stream = sounds['prime_start']
-			$audio.play()
+			
+			if state_progress == 0:
+				$audio.stop()
+			else:
+				$audio.stream = sounds['prime_start']
+				$audio.play()
+
 
 			# set the hook to primed
 			if state_progress >= 1:

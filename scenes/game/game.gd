@@ -1,17 +1,20 @@
 extends Node2D
 
-var current_time = 0
+var current_time = -1
 var fishing_checks = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$dialog.run_script('intro')
 	$hud.high_score = high_score()
 	for i in range(30):
 		spawn_fish()
+	
+	await $dialog.run_script('intro')
+	current_time = 0
 
 func _physics_process(delta: float) -> void:
-	current_time += delta
+	if current_time != -1:
+		current_time += delta
 	if int(current_time) % 30 >= fishing_checks:
 		fishing_check()
 		fishing_checks += 1
