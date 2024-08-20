@@ -40,8 +40,8 @@ func _ready() -> void:
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 	while file_name != "":
-		if not dir.current_is_dir() and file_name.ends_with('.import'):
-			files.append(file_name.left(-7))
+		if not dir.current_is_dir() and not file_name.ends_with('.import'):
+			files.append(file_name)
 		file_name = dir.get_next()
 
 	var randfile = randi_range(0, len(files)-1)

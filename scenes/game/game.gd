@@ -4,7 +4,7 @@ var current_time = -1
 var fishing_checks = 0
 
 var max_fish = 5
-var inspector_time = 30
+var inspector_time = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -47,9 +47,10 @@ func fishing_check():
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 	while file_name != "":
-		if not dir.current_is_dir() and file_name.ends_with('.import'):
-			files.append(file_name.left(-7))
+		if not dir.current_is_dir() and not file_name.ends_with('.import'):
+			files.append(file_name)
 		file_name = dir.get_next()
+	dir.list_dir_end()
 
 	var randfile = randi_range(0, len(files)-1)
 
@@ -65,9 +66,10 @@ func fishing_check():
 	dir.list_dir_begin()
 	file_name = dir.get_next()
 	while file_name != "":
-		if not dir.current_is_dir() and file_name.ends_with('.import'):
-			files.append(file_name.left(-7))
+		if not dir.current_is_dir() and not file_name.ends_with('.import'):
+			files.append(file_name)
 		file_name = dir.get_next()
+	dir.list_dir_end()
 
 	randfile = randi_range(0, len(files)-1)
 	
