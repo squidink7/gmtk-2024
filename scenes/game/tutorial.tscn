@@ -2,8 +2,11 @@
 
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_5o2du"]
 [ext_resource type="Script" path="res://scenes/game/back.gd" id="3_gln6o"]
-[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="4_2rxx1"]
+
 [ext_resource type="Texture2D" uid="uid://j3mad7mvsftg" path="res://Screenshot 2024-08-20 211740.png" id="5_73olv"]
+
+[ext_resource type="AudioStream" uid="uid://drqhbxk8hikp2" path="res://assets/audio/sfx/button.ogg" id="4_it8av"]
+f110b873eb9176c45e242610666ba633505983da
 [ext_resource type="AudioStream" uid="uid://c8o6ws6p5fnnd" path="res://assets/audio/music/happy xylo.ogg" id="5_k75d8"]
 [ext_resource type="Texture2D" uid="uid://nxate16ohs0h" path="res://Screenshot 2024-08-20 211401.png" id="6_y85xr"]
 [ext_resource type="Texture2D" uid="uid://cd3045xdj0csh" path="res://Screenshot 2024-08-20 211702.png" id="7_uj2hd"]
@@ -37,6 +40,7 @@ script = ExtResource("3_gln6o")
 
 [node name="clicksound" type="AudioStreamPlayer2D" parent="Back"]
 stream = ExtResource("4_2rxx1")
+stream = ExtResource("4_it8av")
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(640, 512)
