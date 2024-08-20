@@ -1,7 +1,11 @@
 extends Node2D
 
-
 signal add_score(score: int)
+
+var sounds = {
+	'good_catch': load('res://assets/audio/sfx/good catch.ogg'),
+	'bad_catch': load('res://assets/audio/sfx/bad catch.ogg'),
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,3 +41,8 @@ func _process(delta: float) -> void:
 func caught_fish(fish: Fish):
 	if not fish.is_garbage:
 		add_score.emit(1)
+		$audio.stream = sounds['good_catch']
+	else:
+		$audio.stream = sounds['bad_catch']
+
+	$audio.play()

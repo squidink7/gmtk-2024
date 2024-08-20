@@ -49,8 +49,6 @@ func fishing_check():
 			files.append(file_name)
 		file_name = dir.get_next()
 
-	print(files)
-	print(len(files))
 	var randfile = randi_range(0, len(files)-1)
 
 	await %dialog.run_script('inspector/pre-check/' + files[randfile].left(-4))
