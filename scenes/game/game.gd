@@ -4,6 +4,7 @@ var current_time = -1
 var fishing_checks = 0
 
 var max_fish = 5
+var inspector_time = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +18,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if current_time != -1:
 		current_time += delta
-	if int(current_time) / 10 > fishing_checks:
+	if int(current_time) / inspector_time > fishing_checks:
 		fishing_checks += 1
 
 		if fishing_checks == 1:
