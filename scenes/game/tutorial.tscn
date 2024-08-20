@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs4mshg6n4hkh"]
+[gd_scene load_steps=6 format=3 uid="uid://bs4mshg6n4hkh"]
 
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_gn3vc"]
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_5o2du"]
 [ext_resource type="Script" path="res://scenes/game/back.gd" id="3_gln6o"]
 [ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="4_2rxx1"]
+[ext_resource type="AudioStream" uid="uid://c8o6ws6p5fnnd" path="res://assets/audio/music/happy xylo.ogg" id="5_k75d8"]
 
 [node name="Tutorial" type="Node2D"]
 
@@ -36,5 +37,10 @@ script = ExtResource("3_gln6o")
 
 [node name="clicksound" type="AudioStreamPlayer2D" parent="Back"]
 stream = ExtResource("4_2rxx1")
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(640, 512)
+stream = ExtResource("5_k75d8")
+autoplay = true
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]

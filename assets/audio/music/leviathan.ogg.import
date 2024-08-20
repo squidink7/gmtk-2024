@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/leviathan.ogg-15273fb17a205498544dc2d4eb8c526
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

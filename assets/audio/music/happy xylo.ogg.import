@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/happy xylo.ogg-935a566ab55d28d8badc9062d31cf9
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
