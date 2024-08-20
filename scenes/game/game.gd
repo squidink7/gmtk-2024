@@ -4,7 +4,7 @@ var current_time = -1
 var fishing_checks = 0
 
 var max_fish = 5
-var inspector_time = 5
+var inspector_time = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
