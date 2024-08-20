@@ -127,4 +127,12 @@ position = Vector2(200, -32)
 
 [node name="audio" type="AudioStreamPlayer" parent="."]
 
+[node name="hintlabel" type="Label" parent="."]
+offset_left = -144.0
+offset_top = -104.0
+offset_right = 88.0
+offset_bottom = -81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
 [connection signal="caught_fish" from="hookpath/pathfollow/fishingline" to="." method="caught_fish"]
+[connection signal="show_hint" from="hookpath/pathfollow/fishingline" to="." method="show_hint"]

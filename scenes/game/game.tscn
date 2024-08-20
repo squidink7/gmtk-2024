@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=18 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
@@ -17,6 +17,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o68nb"]
 size = Vector2(1664, 392)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swyn4"]
+size = Vector2(410.001, 313.998)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jxhwa"]
 
@@ -67,6 +70,11 @@ position = Vector2(216, 144)
 [node name="boundry" type="Area2D" parent="."]
 position = Vector2(1984, 272)
 script = ExtResource("1_gxcjl")
+
+[node name="ground" type="CollisionShape2D" parent="boundry"]
+position = Vector2(-1829, 179)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_swyn4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boundry"]
 rotation = -1.5708
