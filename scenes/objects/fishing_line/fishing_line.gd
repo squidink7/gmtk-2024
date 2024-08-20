@@ -7,6 +7,7 @@ var state_progress: float = 0.0
 var cast_force: float = 0
 
 signal caught_fish(fish: Fish)
+signal show_hint(hint: String)
 
 enum LineState {
 	IDLE,
@@ -93,22 +94,25 @@ func _input(event: InputEvent) -> void:
 		
 		match current_state:
 			LineState.IDLE:
-				# pull back on line
-				if event.relative.x < 0:
-					# only draw back when holding the mouse button
-					if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-						state_progress -= max(event.relative.x / 200, -0.03)
-					else:
-						if event.relative.x <= -0.15:
-							# show "hold down mouse" label
-							pass
+				# only draw back when holding the mouse button
+				if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and event.relative.x < 0:
+					state_progress -= max(event.relative.x / 200, -0.03)
+				elif event.relative.x <= -0.15:
+					show_hint.emit('Hold the mouse button!')
+				elif Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+					show_hint.emit('Move the mouse left!')
 
 			LineState.PRIMED:
 				if event.relative.x >= 0.2 and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 					set_current_state(LineState.CASTING)
+					show_hint.emit('')
 					$audio.stream = sounds['cast']
 					$audio.play()
 					$hook.freeze = false
+				elif Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+					show_hint.emit('Release the mouse button!')
+				elif not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+					show_hint.emit('Cast the line out!')
 
 			LineState.CASTING:
 				# flick line forward

@@ -46,3 +46,13 @@ func caught_fish(fish: Fish):
 		$audio.stream = sounds['bad_catch']
 
 	$audio.play()
+
+var shown_hints = false
+func show_hint(hint:String) -> void:
+	if shown_hints:
+		return
+
+	if hint == '':
+		shown_hints = true
+
+	$hintlabel.text = hint
