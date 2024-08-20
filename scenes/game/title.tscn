@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chxsmsxy5vk2f"]
+[gd_scene load_steps=8 format=3 uid="uid://chxsmsxy5vk2f"]
 
 [ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="1_lnnow"]
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_n4agn"]
@@ -57,6 +57,14 @@ offset_bottom = 506.0
 scale = Vector2(5.4375, 5.4375)
 texture = ExtResource("6_gpy7m")
 
+[node name="fishing line" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 136.0
+offset_right = 2260.0
+offset_bottom = 1333.0
+scale = Vector2(0.00869569, 0.207157)
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 z_index = 1
 layout_mode = 0
@@ -91,9 +99,5 @@ script = ExtResource("7_j5eaa")
 [node name="clicksound" type="AudioStreamPlayer2D" parent="Play"]
 position = Vector2(-816, -288)
 stream = ExtResource("8_er3yk")
-[node name="fishing line" type="Sprite2D" parent="."]
-position = Vector2(892, 245.625)
-scale = Vector2(0.00869569, 0.207157)
-texture = ExtResource("8_bga6m")
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
