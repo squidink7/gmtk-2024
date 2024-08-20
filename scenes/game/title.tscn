@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d4c58fo7y4w8o" path="res://assets/textures/objects/fish/rare/Beeg_Feesh.png" id="6_gpy7m"]
 [ext_resource type="Script" path="res://scenes/game/play.gd" id="7_j5eaa"]
 [ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="8_er3yk"]
+[ext_resource type="Texture2D" uid="uid://d3cckq8r0ty8x" path="res://owzcnztk.bmp" id="8_bga6m"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -75,10 +76,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -336.0
-offset_top = -36.0
-offset_right = -72.0
-offset_bottom = 26.0
+offset_left = -376.0
+offset_top = 28.0
+offset_right = -112.0
+offset_bottom = 90.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -90,5 +91,9 @@ script = ExtResource("7_j5eaa")
 [node name="clicksound" type="AudioStreamPlayer2D" parent="Play"]
 position = Vector2(-816, -288)
 stream = ExtResource("8_er3yk")
+[node name="fishing line" type="Sprite2D" parent="."]
+position = Vector2(892, 245.625)
+scale = Vector2(0.00869569, 0.207157)
+texture = ExtResource("8_bga6m")
 
 [connection signal="pressed" from="Play" to="Play" method="_on_pressed"]

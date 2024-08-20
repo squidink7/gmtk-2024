@@ -85,11 +85,11 @@ func set_line_origin(pos: Vector2):
 	$line.points[0] = to_local(pos)
 
 func _input(event: InputEvent) -> void:
+	# don't move if dialog active
+	if $/root/game/dialog.visible:
+		return
+	
 	if event is InputEventMouseMotion:
-		
-		# don't move if dialog active
-		if $/root/game/dialog.visible:
-			return
 		
 		match current_state:
 			LineState.IDLE:

@@ -1,5 +1,4 @@
-[do the thing]
-
+/CHAR inspector/default
 Salutations, sir.
 I trust you are aware of the fishing regulations around here?
 There are some fish that you MUST NOT UNDER ANY CIRCUMSTANCES catch. 

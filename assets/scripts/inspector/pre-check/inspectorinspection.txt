@@ -1,4 +1,3 @@
-[coding magic]
-
+/CHAR inspector/default
 Hands in the air! Now!
 Just kidding. Unless...

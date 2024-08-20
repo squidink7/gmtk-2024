@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8v3b4ihe0pht"
-path="res://.godot/imported/angry.png-a9d74ca80acacdffff845bad578ca2e7.ctex"
+uid="uid://d3cckq8r0ty8x"
+path="res://.godot/imported/owzcnztk.bmp-537cad78825e8abc5bc88f32c836fdf8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish man/angry.png"
-dest_files=["res://.godot/imported/angry.png-a9d74ca80acacdffff845bad578ca2e7.ctex"]
+source_file="res://owzcnztk.bmp"
+dest_files=["res://.godot/imported/owzcnztk.bmp-537cad78825e8abc5bc88f32c836fdf8.ctex"]
 
 [params]
 

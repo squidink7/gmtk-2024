@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyy0qg7vv6sdj"
-path="res://.godot/imported/default.png-891c71af9d3f1c3ec5dbfaf1b8ef1ca1.ctex"
+path="res://.godot/imported/default.png-b7004bef801b9e30f5f249418a12d597.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish man/default.png"
-dest_files=["res://.godot/imported/default.png-891c71af9d3f1c3ec5dbfaf1b8ef1ca1.ctex"]
+source_file="res://assets/textures/objects/inspector/default.png"
+dest_files=["res://.godot/imported/default.png-b7004bef801b9e30f5f249418a12d597.ctex"]
 
 [params]
 
