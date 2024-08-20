@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqbrk63ly54yu"]
+[gd_scene load_steps=16 format=3 uid="uid://bqbrk63ly54yu"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_3iu1x"]
 [ext_resource type="Script" path="res://scenes/game/areas.gd" id="1_gxcjl"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://isvtjrakmt8b" path="res://assets/textures/environment/water/top/water_top2.png" id="7_bpo6j"]
 [ext_resource type="Texture2D" uid="uid://b7je8qnykeod4" path="res://assets/textures/environment/water/top/water_top3.png" id="8_litcd"]
 [ext_resource type="Texture2D" uid="uid://dljpwn14wea21" path="res://assets/textures/environment/water/top/water_top4.png" id="9_jygpv"]
+[ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="12_hbywy"]
+[ext_resource type="Texture2D" uid="uid://ci7w8jdfwe3jl" path="res://assets/textures/environment/dirt.png" id="13_ckkli"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o68nb"]
 size = Vector2(1664, 392)
@@ -79,6 +81,43 @@ limit_bottom = 648
 unique_name_in_owner = true
 
 [node name="hud" parent="." instance=ExtResource("5_2vejn")]
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(576.176, 286.5)
+scale = Vector2(6.40196, 6.40196)
+texture = ExtResource("12_hbywy")
+
+[node name="Sky2" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(1725, 286)
+scale = Vector2(6.40196, 6.40196)
+texture = ExtResource("12_hbywy")
+flip_h = true
+
+[node name="Dirt" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(161.164, 307.625)
+scale = Vector2(3.42647, 3.42647)
+texture = ExtResource("13_ckkli")
+
+[node name="Dirt2" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(170, 395)
+scale = Vector2(3.61765, 3.61765)
+texture = ExtResource("13_ckkli")
+
+[node name="Dirt3" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(169, 487)
+scale = Vector2(3.61765, 3.61765)
+texture = ExtResource("13_ckkli")
+
+[node name="Dirt4" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(170, 555)
+scale = Vector2(3.61765, 3.61765)
+texture = ExtResource("13_ckkli")
 
 [connection signal="body_entered" from="water" to="water" method="on_water_entered"]
 [connection signal="add_score" from="Dragon" to="hud" method="add_score"]

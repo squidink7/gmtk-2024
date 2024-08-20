@@ -10,10 +10,11 @@
 [node name="Title" type="Node2D"]
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -352.0
-offset_top = 208.0
-offset_right = -16.0
-offset_bottom = 544.0
+z_index = 1
+offset_left = 35.0
+offset_top = 9.0
+offset_right = 608.0
+offset_bottom = 345.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_n4agn")
 theme_override_font_sizes/normal_font_size = 100
@@ -23,10 +24,10 @@ text = "insert name here"
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 1392.0
-offset_top = 312.0
-offset_right = 1656.0
-offset_bottom = 374.0
+offset_left = 813.0
+offset_top = 317.0
+offset_right = 1077.0
+offset_bottom = 379.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -36,18 +37,19 @@ text = "Back
 script = ExtResource("3_hjobn")
 
 [node name="Dragon" type="Sprite2D" parent="."]
-position = Vector2(400, 344)
+position = Vector2(603, 344)
 scale = Vector2(14.3211, 14.3211)
 texture = ExtResource("4_jn7qy")
 
 [node name="Default" type="Sprite2D" parent="."]
-position = Vector2(1752, 48)
-scale = Vector2(10.25, 10.25)
+z_index = -1
+position = Vector2(130, 518)
+scale = Vector2(8.15625, 8.15625)
 texture = ExtResource("5_vp3d1")
 
 [node name="BeegFeesh" type="Sprite2D" parent="."]
-position = Vector2(952, 536)
-scale = Vector2(6.5, 6.5)
+position = Vector2(979, 562)
+scale = Vector2(5.4375, 5.4375)
 texture = ExtResource("6_gpy7m")
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
