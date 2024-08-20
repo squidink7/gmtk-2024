@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bolwct4a7r6d"
+path="res://.godot/imported/chill arp (fishing 2).ogg-6d0177591e95488531054851aee99855.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/chill arp (fishing 2).ogg"
+dest_files=["res://.godot/imported/chill arp (fishing 2).ogg-6d0177591e95488531054851aee99855.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

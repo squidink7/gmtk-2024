@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c44cu85l8ps1i"
-path="res://.godot/imported/Apple_Core.png-b235e7fc84be8efbbfc99c67db8e017e.ctex"
+uid="uid://b5u388ptpylkp"
+path="res://.godot/imported/Can.png-04edf69c8137f85a226c85392b3481b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish/Apple_Core.png"
-dest_files=["res://.godot/imported/Apple_Core.png-b235e7fc84be8efbbfc99c67db8e017e.ctex"]
+source_file="res://assets/textures/objects/garbage/Can.png"
+dest_files=["res://.godot/imported/Can.png-04edf69c8137f85a226c85392b3481b3.ctex"]
 
 [params]
 

@@ -20,7 +20,7 @@ disabled = true
 
 [node name="hookdetector" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hookdetector"]
+[node name="shape" type="CollisionShape2D" parent="hookdetector"]
 shape = SubResource("CircleShape2D_wurst")
 
 [node name="sprite" type="Sprite2D" parent="."]

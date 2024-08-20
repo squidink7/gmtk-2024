@@ -34,5 +34,6 @@ func _process(delta: float) -> void:
 
 		%fishingline.set_line_origin($castanimpoints.get_child($sprite.frame).global_position)
 
-func caught_fish():
-	add_score.emit(1)
+func caught_fish(fish: Fish):
+	if not fish.is_garbage:
+		add_score.emit(1)

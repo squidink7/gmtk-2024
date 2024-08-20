@@ -5,6 +5,7 @@ extends CharacterBody2D
 var curiosity: float = 1
 var target_position = Vector2.ZERO
 var move_distance = 80
+var is_garbage = false
 
 enum FishState {
 	IDLE,
@@ -18,8 +19,16 @@ var hook: Node2D = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var path = 'res://assets/textures/objects/fish/'
+	
+	# 1/4 fish are garbage
+	if randi() % 4 == 0:
+		is_garbage = true
+		# $hookdetector/shape.shape.radius /= 2
+		path = 'res://assets/textures/objects/garbage/'
+	
 	var files = []
-	var dir = DirAccess.open('res://assets/textures/objects/fish')
+	var dir = DirAccess.open(path)
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 	while file_name != "":
@@ -29,7 +38,7 @@ func _ready() -> void:
 
 	var randfile = randi_range(0, len(files)-1)
 
-	$sprite.texture = load('res://assets/textures/objects/fish/'+files[randfile])
+	$sprite.texture = load(path+files[randfile])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -47,20 +56,24 @@ func _process(delta: float) -> void:
 	elif current_state == FishState.CURIOUS:
 		target_position = hook.global_position
 	
-	if current_state == FishState.IDLE or current_state == FishState.SEENHOOK:
+	if (current_state == FishState.IDLE or current_state == FishState.SEENHOOK):
 		# find new spot
 		if reached_target():
 			var water_shape = ($"../shape" as CollisionShape2D)
 			
-			# generate random offset
-			var randx = randi_range(-move_distance, move_distance)
-			var randy = randi_range(-move_distance, move_distance)
+			if is_garbage:
+				$sprite.position.y = sin(Time.get_ticks_msec()/500.0) * 10
+				target_position = global_position
+			else:
+				# generate random offset
+				var randx = randi_range(-move_distance, move_distance)
+				var randy = randi_range(-move_distance, move_distance)
+				target_position = global_position + Vector2(randx, randy)
 			
-			target_position = global_position + Vector2(randx, randy)
 
 			# ensure fish stays in water
 			target_position = target_position.clamp(water_shape.global_position-water_shape.shape.size/2+Vector2(80,80), water_shape.global_position+water_shape.shape.size/2-Vector2(80,80))
-	
+		
 	if current_state != FishState.CAUGHT:
 		var movevec = (target_position - global_position)
 		velocity = movevec * 2

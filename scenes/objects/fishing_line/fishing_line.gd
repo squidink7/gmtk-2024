@@ -6,7 +6,7 @@ var current_state = LineState.IDLE
 var state_progress: float = 0.0
 var cast_force: float = 0
 
-signal caught_fish
+signal caught_fish(fish: Fish)
 
 enum LineState {
 	IDLE,
@@ -20,7 +20,7 @@ var sounds = {
 	'cast': load('res://assets/audio/sfx/rod cast whip.ogg'),
 	'reel_in': load('res://assets/audio/sfx/rod reel in.ogg'),
 	'prime_start': load('res://assets/audio/sfx/rod initial pull-back.ogg'),
-	'prime': load('res://assets/audio/sfx/pull-back buildup.ogg'),
+	'primed': load('res://assets/audio/sfx/pull-back buildup.ogg'),
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -37,7 +37,8 @@ func _physics_process(delta: float) -> void:
 			# pull hook back to idle if user doesn't keep pulling
 			state_progress -= 0.01
 			state_progress = max(state_progress, 0)
-			# $audio.stream.
+			$audio.stream = sounds['prime_start']
+			$audio.play()
 
 			# set the hook to primed
 			if state_progress >= 1:
@@ -48,12 +49,14 @@ func _physics_process(delta: float) -> void:
 		
 		LineState.PRIMED:
 			pass
-			# $audio/tension.play()
+			$audio.stream = sounds['primed']
 		
 		LineState.CASTING:
 			fling_line(delta)
 			# state_progress measures time left to add force to the flick
 			state_progress += 0.08
+			$audio.stream = sounds['cast']
+			$audio.play()
 			if state_progress >= 1:
 				set_current_state(LineState.CAST)
 		LineState.CAST:
@@ -97,7 +100,7 @@ func _input(event: InputEvent) -> void:
 			LineState.PRIMED:
 				if event.relative.x >= 0.2 and not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 					set_current_state(LineState.CASTING)
-					# $audio.stream = load('res://gd.')
+					$audio.stream = sounds['cast']
 					$audio.play()
 					$hook.freeze = false
 
@@ -111,5 +114,7 @@ func _input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if current_state == LineState.FLOATING:
 				var fish = await $hook.reel_in()
+				$audio.stream = sounds['reel_in']
+				$audio.play()
 				if fish != null:
-					caught_fish.emit()
+					caught_fish.emit(fish)

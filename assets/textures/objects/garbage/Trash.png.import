@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw4e11nosplcw"
-path="res://.godot/imported/Can.png-457419c544f8e895790c46f357314f16.ctex"
+uid="uid://hdxqj0htvvhu"
+path="res://.godot/imported/Trash.png-9b2aa6d23027f79027d809582c2f8e23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish/Can.png"
-dest_files=["res://.godot/imported/Can.png-457419c544f8e895790c46f357314f16.ctex"]
+source_file="res://assets/textures/objects/garbage/Trash.png"
+dest_files=["res://.godot/imported/Trash.png-9b2aa6d23027f79027d809582c2f8e23.ctex"]
 
 [params]
 

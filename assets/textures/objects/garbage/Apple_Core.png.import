@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs8xeq28k0lti"
-path="res://.godot/imported/Trash.png-7ff144b6ef5c0000acab8a3c891cbb1a.ctex"
+uid="uid://loxl4vtjnoxh"
+path="res://.godot/imported/Apple_Core.png-2388d34b4c19f4384f6d79e9d3120325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish/Trash.png"
-dest_files=["res://.godot/imported/Trash.png-7ff144b6ef5c0000acab8a3c891cbb1a.ctex"]
+source_file="res://assets/textures/objects/garbage/Apple_Core.png"
+dest_files=["res://.godot/imported/Apple_Core.png-2388d34b4c19f4384f6d79e9d3120325.ctex"]
 
 [params]
 
