@@ -92,5 +92,5 @@ func save_score(score):
 	save_file.save('user://highscore')
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Pause"):
+	if event.is_action_pressed("Pause") or (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT):
 		get_tree().change_scene_to_file('res://scenes/game/main_menu.tscn')
