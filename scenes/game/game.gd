@@ -90,3 +90,7 @@ func save_score(score):
 	save_file.set_value('high', 'score', score)
 	save_file.set_value('high', 'time', current_time)
 	save_file.save('user://highscore')
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Pause"):
+		get_tree().change_scene_to_file('res://scenes/game/main_menu.tscn')
