@@ -6,6 +6,7 @@ var curiosity: float = 1
 var target_position = Vector2.ZERO
 var move_distance = 80
 var is_garbage = false
+var is_redacted = false
 
 enum FishState {
 	IDLE,
@@ -27,6 +28,12 @@ func _ready() -> void:
 		$hookdetector/shape.disabled = true
 		$hookdetector/garbageshape.disabled = false
 		path = 'res://assets/textures/objects/garbage/'
+	
+	# 1/10 fish are beeg fish or redacted fish
+	if randi() % 10 == 0:
+		is_redacted = true
+		# $hookdetector/shape.shape.radius /= 2
+		path = 'res://assets/textures/objects/fish/rare/'
 	
 	var files = []
 	var dir = DirAccess.open(path)
