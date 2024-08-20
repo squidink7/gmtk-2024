@@ -31,13 +31,13 @@ func fishing_check():
 	# spawn the fish environment protection police
 	pass
 
+func high_score():
+	var save_file = ConfigFile.new()
+	save_file.load('user://highscore')
+	return save_file.get_value('high', 'score')
+
 func save_score():
-	pass
-	## template code
-	# var save_game = File.new()
-    # save_game.open("user://savegame.save", File.WRITE)
-    # var save_nodes = get_tree().get_nodes_in_group("Persist")
-    # for i in save_nodes:
-    #     var node_data = i.call("save");
-    #     save_game.store_line(to_json(node_data))
-    # save_game.close()
+	var save_file = ConfigFile.new()
+	save_file.set_value('high', 'score', %hud.score)
+	save_file.set_value('high', 'time', current_time)
+	save_file.save('user://highscore')
