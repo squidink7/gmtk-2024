@@ -18,11 +18,12 @@ func _physics_process(delta: float) -> void:
 	if current_time != -1:
 		current_time += delta
 	if int(current_time) / 10 > fishing_checks:
-		if fishing_checks == 0:
-			$dialog.run_script('inspector/inspectorintro')
-		
-		fishing_check()
 		fishing_checks += 1
+
+		if fishing_checks == 1:
+			$dialog.run_script('inspector/inspectorintro')
+		else:
+			fishing_check()
 
 func _process(delta: float) -> void:
 	$hud.set_time(max(current_time, 0))
@@ -71,9 +72,9 @@ func fishing_check():
 	randfile = randi_range(0, len(files)-1)
 	
 	if $hud.score <= max_fish:
-		await %dialog.run_script('inspector/pass' + files[randfile].left(-4))
+		await %dialog.run_script('inspector/pass/' + files[randfile].left(-4))
 	else:
-		await %dialog.run_script('inspector/fail' + files[randfile].left(-4))
+		await %dialog.run_script('inspector/fail/' + files[randfile].left(-4))
 		get_tree().change_scene_to_file('res://scenes/game/main_menu.tscn')
 
 

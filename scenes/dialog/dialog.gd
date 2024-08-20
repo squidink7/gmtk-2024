@@ -14,6 +14,11 @@ func run_script(script_name):
 	character_textures = []
 	current_character_texture = 0
 	var file = FileAccess.open("res://assets/scripts/" + script_name + ".txt", FileAccess.READ)
+	
+	if not file:
+		print('Error opening script: ' + script_name)
+		return
+	
 	var script_text = file.get_as_text()
 
 	script_lines = script_text.split('\n')
@@ -22,6 +27,11 @@ func run_script(script_name):
 	await script_end
 
 func next_line():
+	# script complete
+	if current_line >= len(script_lines):
+		close_dialog()
+		return
+
 	while script_lines[current_line].begins_with('/CHAR'):
 		# load character textures
 		var character_texture_names = script_lines[current_line].split(' ').slice(1)
@@ -32,15 +42,10 @@ func next_line():
 		
 		update_character_texture()
 		current_line += 1
-		
-	# script complete
-	if current_line >= len(script_lines) - 1:
-		close_dialog()
-		return
 	
 	# play voice line
 	$voice.play()
-	$voice/timer.wait_time = float(len(script_lines[current_line])) / 20.0
+	$voice/timer.wait_time = max(float(len(script_lines[current_line])) / 20.0, 1)
 	$voice/timer.start()
 	$character_timer.start()
 
@@ -73,4 +78,5 @@ func stop_voice() -> void:
 
 func close_dialog() -> void:
 	visible = false
+	$voice.stop()
 	script_end.emit()
