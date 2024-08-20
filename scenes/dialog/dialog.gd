@@ -5,6 +5,8 @@ var current_line = 0
 var character_textures = []
 var current_character_texture = 0
 
+signal script_end
+
 func run_script(script_name):
 	visible = true
 	var file = FileAccess.open("res://assets/scripts/" + script_name + ".txt", FileAccess.READ)
@@ -12,6 +14,8 @@ func run_script(script_name):
 
 	script_lines = script_text.split('\n')
 	next_line()
+
+	await script_end
 
 func next_line():	
 	while script_lines[current_line].begins_with('/CHAR'):
@@ -60,3 +64,4 @@ func stop_voice() -> void:
 
 func close_dialog() -> void:
 	visible = false
+	script_end.emit()
