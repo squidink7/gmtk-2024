@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	$hud.set_time(max(current_time, 0))
+	
 
 func spawn_fish():
 	var fish = load('res://scenes/objects/fish/fish.tscn').instantiate()
