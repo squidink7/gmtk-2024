@@ -3,6 +3,8 @@ extends Node2D
 var current_time = -1
 var fishing_checks = 0
 
+var max_fish = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$hud.high_score = high_score()
@@ -33,7 +35,42 @@ func spawn_fish():
 
 func fishing_check():
 	# spawn the fish environment protection police
-	pass
+	var path = 'res://assets/scripts/inspector/pre-check/'
+	var files = []
+	var dir = DirAccess.open(path)
+	dir.list_dir_begin()
+	var file_name = dir.get_next()
+	while file_name != "":
+		if not dir.current_is_dir() and not file_name.ends_with('.import'):
+			files.append(file_name)
+		file_name = dir.get_next()
+
+	var randfile = randi_range(0, len(files)-1)
+
+	await %dialog.run_script('inspector/pre-check/' + randfile)
+
+	if $hud.score <= max_fish:
+		path = 'res://assets/scripts/inspector/pass/'
+	else:
+		path = 'res://assets/scripts/inspector/fail/'
+	
+	files = []
+	dir = DirAccess.open(path)
+	dir.list_dir_begin()
+	file_name = dir.get_next()
+	while file_name != "":
+		if not dir.current_is_dir() and not file_name.ends_with('.import'):
+			files.append(file_name)
+		file_name = dir.get_next()
+
+	randfile = randi_range(0, len(files)-1)
+	
+	if $hud.score <= max_fish:
+		await %dialog.run_script('inspector/pass' + randfile)
+	else:
+		await %dialog.run_script('inspector/fail' + randfile)
+		get_tree().change_scene_to_file('res://scenes/game/main_menu.tscn')
+
 
 func high_score():
 	var save_file = ConfigFile.new()
