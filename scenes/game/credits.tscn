@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=3 uid="uid://h4iex8hf0u27"]
+
+[ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_lldkv"]
+[ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_s4nlo"]
+[ext_resource type="Script" path="res://scenes/game/back.gd" id="3_t76ka"]
+[ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="4_erhds"]
+[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="4_nnyi1"]
+[ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="5_dpg6h"]
+
+[node name="Credits" type="Node2D"]
+
+[node name="Back" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 856.0
+offset_top = 560.0
+offset_right = 1120.0
+offset_bottom = 622.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_s4nlo")
+text = "Back
+"
+script = ExtResource("3_t76ka")
+
+[node name="clicksound" type="AudioStreamPlayer2D" parent="Back"]
+stream = ExtResource("4_nnyi1")
+
+[node name="Sky" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(577.441, 314.75)
+scale = Vector2(6.44608, 6.44608)
+texture = ExtResource("4_erhds")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 56.0
+offset_top = 117.0
+offset_right = 968.0
+offset_bottom = 605.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_dpg6h")
+theme_override_font_sizes/normal_font_size = 24
+text = "
+segv						Lead Programmer
+
+Joltemon					Character/UI Artist, Programmer
+
+seraphim					Character/Environment Artist
+
+shroom13372				Script Writer, Moral Support
+
+ChiefCheetos				Programmer
+
+foxietrot					Character/Enviroment Artist
+
+tenom_nb					Music & Sound Designer"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 48.0
+offset_top = 15.0
+offset_right = 328.0
+offset_bottom = 127.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_lldkv")
+theme_override_font_sizes/normal_font_size = 100
+text = "Credits"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 56.0
+offset_top = 496.0
+offset_right = 976.0
+offset_bottom = 632.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_dpg6h")
+theme_override_font_sizes/normal_font_size = 19
+text = "
+Assets Used:
+
+Berry Rotunda font by Typo-Graf on dafont.com
+
+Augusta font by Dieter Steiffmann on dafont.com"
+
+[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
