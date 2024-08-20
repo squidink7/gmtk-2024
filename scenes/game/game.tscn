@@ -80,10 +80,10 @@ limit_left = 0
 limit_right = 1984
 limit_bottom = 648
 
+[node name="hud" parent="." instance=ExtResource("5_2vejn")]
+
 [node name="dialog" parent="." instance=ExtResource("4_jlu1b")]
 unique_name_in_owner = true
-
-[node name="hud" parent="." instance=ExtResource("5_2vejn")]
 
 [node name="Sky" type="Sprite2D" parent="."]
 z_index = -4

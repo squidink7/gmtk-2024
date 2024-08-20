@@ -29,8 +29,8 @@ func _ready() -> void:
 		$hookdetector/garbageshape.disabled = false
 		path = 'res://assets/textures/objects/garbage/'
 	
-	# 1/10 fish are beeg fish or redacted fish
-	if randi() % 10 == 0:
+	# 1/20 fish are beeg fish or redacted fish
+	if randi() % 20 == 0:
 		is_redacted = true
 		# $hookdetector/shape.shape.radius /= 2
 		path = 'res://assets/textures/objects/fish/rare/'

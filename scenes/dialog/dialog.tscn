@@ -34,10 +34,10 @@ stretch_mode = 5
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -120.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = 64.0
+offset_left = -831.0
+offset_top = 418.0
+offset_right = -735.0
+offset_bottom = 458.0
 grow_horizontal = 0
 text = "skip"
 

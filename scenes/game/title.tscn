@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="1_lnnow"]
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_n4agn"]
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_1jnic"]
-[ext_resource type="Script" path="res://scenes/game/back.gd" id="3_hjobn"]
 [ext_resource type="Texture2D" uid="uid://dphvy04ditv57" path="res://assets/textures/objects/dragon/dragon.png" id="4_jn7qy"]
 [ext_resource type="Texture2D" uid="uid://rwitrmdywqn1" path="res://assets/textures/objects/wizard/default.png" id="5_vp3d1"]
-[ext_resource type="Texture2D" uid="uid://d4c58fo7y4w8o" path="res://assets/textures/objects/fish/Beeg_Feesh.png" id="6_gpy7m"]
+[ext_resource type="Texture2D" uid="uid://d4c58fo7y4w8o" path="res://assets/textures/objects/fish/rare/Beeg_Feesh.png" id="6_gpy7m"]
+[ext_resource type="Script" path="res://scenes/game/play.gd" id="7_j5eaa"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -57,6 +57,7 @@ texture = ExtResource("6_gpy7m")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 35.0
 offset_top = 9.0
 offset_right = 608.0
@@ -66,7 +67,7 @@ theme_override_fonts/normal_font = ExtResource("1_n4agn")
 theme_override_font_sizes/normal_font_size = 100
 text = "insert name here"
 
-[node name="Back" type="Button" parent="."]
+[node name="Play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -83,6 +84,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_1jnic")
 text = "Play"
-script = ExtResource("3_hjobn")
+script = ExtResource("7_j5eaa")
 
-[connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]

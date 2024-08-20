@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://duod4obs8vw35"]
+[gd_scene load_steps=4 format=3 uid="uid://duod4obs8vw35"]
 
 [ext_resource type="Script" path="res://scenes/hud/hud.gd" id="1_retmk"]
+[ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="2_s6n4t"]
+[ext_resource type="Texture2D" uid="uid://c7f3rdyruouv6" path="res://assets/textures/objects/UI/Text_Box (1).png" id="3_gnio6"]
 
 [node name="hud" type="CanvasLayer"]
 script = ExtResource("1_retmk")
@@ -9,24 +11,38 @@ script = ExtResource("1_retmk")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -200.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = 72.0
+offset_left = -177.0
+offset_top = 36.0
+offset_right = 15.0
+offset_bottom = 100.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_s6n4t")
+theme_override_font_sizes/font_size = 22
 text = "Score: 0"
 
 [node name="timelabel" type="Label" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -200.0
-offset_top = 72.0
-offset_right = -8.0
-offset_bottom = 136.0
+offset_left = -194.0
+offset_top = 108.0
+offset_right = -2.0
+offset_bottom = 172.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("2_s6n4t")
+theme_override_font_sizes/font_size = 22
 text = "Time: 0"
+
+[node name="TextBox(1)" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1032.64, 40.0625)
+scale = Vector2(1.825, 1.825)
+texture = ExtResource("3_gnio6")
+
+[node name="TextBox(1)2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1033.64, 112.063)
+scale = Vector2(1.825, 1.825)
+texture = ExtResource("3_gnio6")
