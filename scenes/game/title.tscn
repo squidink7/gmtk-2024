@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chxsmsxy5vk2f"]
+[gd_scene load_steps=10 format=3 uid="uid://chxsmsxy5vk2f"]
 
 [ext_resource type="Texture2D" uid="uid://c0dgpehwssx6b" path="res://assets/textures/environment/sky.png" id="1_lnnow"]
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_n4agn"]
@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://rwitrmdywqn1" path="res://assets/textures/objects/wizard/default.png" id="5_vp3d1"]
 [ext_resource type="Texture2D" uid="uid://d4c58fo7y4w8o" path="res://assets/textures/objects/fish/rare/Beeg_Feesh.png" id="6_gpy7m"]
 [ext_resource type="Script" path="res://scenes/game/play.gd" id="7_j5eaa"]
-[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="8_er3yk"]
 [ext_resource type="Texture2D" uid="uid://d3cckq8r0ty8x" path="res://owzcnztk.bmp" id="8_bga6m"]
+[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="8_er3yk"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -91,6 +91,7 @@ script = ExtResource("7_j5eaa")
 [node name="clicksound" type="AudioStreamPlayer2D" parent="Play"]
 position = Vector2(-816, -288)
 stream = ExtResource("8_er3yk")
+
 [node name="fishing line" type="Sprite2D" parent="."]
 position = Vector2(892, 245.625)
 scale = Vector2(0.00869569, 0.207157)
