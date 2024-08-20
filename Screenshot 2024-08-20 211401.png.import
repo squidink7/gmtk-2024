@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ngioiojkbta0"
-path="res://.godot/imported/Gemfish.png-5c0c215f727ed95e11c406b36b00605d.ctex"
+uid="uid://nxate16ohs0h"
+path="res://.godot/imported/Screenshot 2024-08-20 211401.png-7348109a904d98a479c9e8b5aac16552.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/objects/fish/Gemfish.png"
-dest_files=["res://.godot/imported/Gemfish.png-5c0c215f727ed95e11c406b36b00605d.ctex"]
+source_file="res://Screenshot 2024-08-20 211401.png"
+dest_files=["res://.godot/imported/Screenshot 2024-08-20 211401.png-7348109a904d98a479c9e8b5aac16552.ctex"]
 
 [params]
 

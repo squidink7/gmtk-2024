@@ -1,32 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs4mshg6n4hkh"]
+[gd_scene load_steps=11 format=3 uid="uid://bs4mshg6n4hkh"]
 
-[ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_gn3vc"]
 [ext_resource type="Theme" uid="uid://djl41mdlk8835" path="res://assets/textures/themes/grey_button.tres" id="2_5o2du"]
 [ext_resource type="Script" path="res://scenes/game/back.gd" id="3_gln6o"]
 [ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="4_2rxx1"]
+[ext_resource type="Texture2D" uid="uid://j3mad7mvsftg" path="res://Screenshot 2024-08-20 211740.png" id="5_73olv"]
 [ext_resource type="AudioStream" uid="uid://c8o6ws6p5fnnd" path="res://assets/audio/music/happy xylo.ogg" id="5_k75d8"]
+[ext_resource type="Texture2D" uid="uid://nxate16ohs0h" path="res://Screenshot 2024-08-20 211401.png" id="6_y85xr"]
+[ext_resource type="Texture2D" uid="uid://cd3045xdj0csh" path="res://Screenshot 2024-08-20 211702.png" id="7_uj2hd"]
+[ext_resource type="Texture2D" uid="uid://8v3b4ihe0pht" path="res://assets/textures/objects/inspector/angry.png" id="8_12pv4"]
+[ext_resource type="Texture2D" uid="uid://ci7w8jdfwe3jl" path="res://assets/textures/environment/dirt.png" id="9_wbkeq"]
+[ext_resource type="FontFile" uid="uid://ce00ghl1fi4m8" path="res://assets/textures/objects/fonts/Berry Rotunda.ttf" id="10_1i1dj"]
 
 [node name="Tutorial" type="Node2D"]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 80.0
-offset_top = -8.0
-offset_right = 1216.0
-offset_bottom = 632.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("1_gn3vc")
-theme_override_font_sizes/normal_font_size = 200
-text = "uh hi...
-good luck"
+[node name="Dirt" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1015.23, 104.75)
+scale = Vector2(21.3627, 21.3627)
+texture = ExtResource("9_wbkeq")
 
 [node name="Back" type="Button" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 640.0
-offset_top = 512.0
-offset_right = 904.0
-offset_bottom = 574.0
+offset_left = 864.0
+offset_top = 552.0
+offset_right = 1128.0
+offset_bottom = 614.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -42,5 +42,86 @@ stream = ExtResource("4_2rxx1")
 position = Vector2(640, 512)
 stream = ExtResource("5_k75d8")
 autoplay = true
+
+[node name="Screenshot2024-08-20211740" type="Sprite2D" parent="."]
+position = Vector2(928, 104)
+scale = Vector2(0.457792, 0.457792)
+texture = ExtResource("5_73olv")
+
+[node name="Screenshot2024-08-20211401" type="Sprite2D" parent="."]
+position = Vector2(232, 216)
+scale = Vector2(0.220427, 0.220427)
+texture = ExtResource("6_y85xr")
+
+[node name="Screenshot2024-08-20211702" type="Sprite2D" parent="."]
+position = Vector2(896, 416)
+scale = Vector2(0.502171, 0.502171)
+texture = ExtResource("7_uj2hd")
+
+[node name="Angry" type="Sprite2D" parent="."]
+position = Vector2(160, 488)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("8_12pv4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 376.0
+offset_bottom = 104.0
+theme_override_fonts/normal_font = ExtResource("10_1i1dj")
+text = "
+Catch fish to increase your score!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 456.0
+offset_top = 120.0
+offset_right = 656.0
+offset_bottom = 296.0
+theme_override_fonts/normal_font = ExtResource("10_1i1dj")
+text = "
+Hold left click and 
+
+drag the mouse to 
+
+the left to pull the 
+
+fishing rod back..."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 736.0
+offset_top = 192.0
+offset_right = 1096.0
+offset_bottom = 320.0
+theme_override_fonts/normal_font = ExtResource("10_1i1dj")
+text = "
+And then let go of left click and flick 
+
+the mouse to the right to cast!"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+offset_left = 469.0
+offset_top = 336.0
+offset_right = 733.0
+offset_bottom = 528.0
+theme_override_fonts/normal_font = ExtResource("10_1i1dj")
+text = "
+Once you've hooked a fish, 
+
+click to reel it in!"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = 296.0
+offset_top = 456.0
+offset_right = 608.0
+offset_bottom = 616.0
+theme_override_fonts/normal_font = ExtResource("10_1i1dj")
+text = "
+Be careful, if you catch too 
+
+many fish and are caught by 
+
+the fishing inspector, you'll be 
+
+thrown in the dungeon!"
 
 [connection signal="pressed" from="Back" to="Back" method="_on_pressed"]
