@@ -108,7 +108,7 @@ position = Vector2(576, 97)
 scale = Vector2(4.4, 3.88571)
 texture = ExtResource("7_e8y7f")
 
-[node name="WaterBottom" type="Sprite2D" parent="."]
+[node name="WaterBottom1" type="Sprite2D" parent="."]
 z_index = -2
 position = Vector2(576, 324)
 scale = Vector2(12.1263, 12.7059)
