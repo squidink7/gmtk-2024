@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfrhbw8n1nbfs"]
+[gd_scene load_steps=11 format=3 uid="uid://cfrhbw8n1nbfs"]
 
 [ext_resource type="Script" path="res://scenes/game/main_menu.gd" id="1_2un8b"]
 [ext_resource type="FontFile" uid="uid://chwgg43e2cmaa" path="res://assets/textures/objects/fonts/Augusta.ttf" id="1_clmfb"]
@@ -9,6 +9,7 @@
 [ext_resource type="Theme" uid="uid://c807kfj7tmlgl" path="res://assets/textures/themes/dark_red.tres" id="4_aktc3"]
 [ext_resource type="Texture2D" uid="uid://c7f3rdyruouv6" path="res://assets/textures/objects/UI/Text_Box (1).png" id="7_e8y7f"]
 [ext_resource type="Texture2D" uid="uid://cmktkhou2yym1" path="res://assets/textures/environment/water/bottom/water_bottom.png" id="9_t330k"]
+[ext_resource type="AudioStream" uid="uid://dyn18g3awq6w8" path="res://assets/audio/sfx/win.ogg" id="10_74qga"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_2un8b")
@@ -104,6 +105,9 @@ z_index = -2
 position = Vector2(576, 324)
 scale = Vector2(12.1263, 12.7059)
 texture = ExtResource("9_t330k")
+
+[node name="clicksound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_74qga")
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]

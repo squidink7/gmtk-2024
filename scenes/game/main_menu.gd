@@ -9,20 +9,25 @@ extends Node2D
 
 
 func _on_quit_game_pressed() -> void:
+	$clicksound.play()
 	get_tree().quit()
-
+	
 
 func _on_continue_pressed() -> void:
+	$clicksound.play()
 	get_tree().change_scene_to_file('res://scenes/game/game.tscn')
 
 
 func _on_tutorial_pressed() -> void:
+	$clicksound.play()
 	get_tree().change_scene_to_file('res://scenes/game/tutorial.tscn')
 
 
 func _on_settings_pressed() -> void:
+	$clicksound.play()
 	get_tree().change_scene_to_file('res://scenes/game/settings.tscn')
 
 
 func _on_exit_to_title_pressed() -> void:
+	$clicksound.play()
 	get_tree().change_scene_to_file('res://scenes/game/title.tscn')
